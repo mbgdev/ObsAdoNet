@@ -11,24 +11,25 @@ using System.Windows.Forms;
 
 namespace Obs_AdoNet.Ogrenci
 {
-    public partial class Ogrenci_Ekrani : Form
+    public partial class Student_Screen : Form
     {
-        public Ogrenci_Ekrani()
+        public Student_Screen()
         {
             InitializeComponent();
         }
 
-        private SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
+        private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
 
         private void labelValues()
         {
             lblStudentScreenDateTime.Text = DateTime.Now.ToLongDateString();
+            lblHours.Text=DateTime.Now.ToLongTimeString();
 
-            SqlCommand labelCommand = new SqlCommand("select StudentNo,StudentName,StudentSurname from Students where StudentNo=@OgrNo", baglanti);
+            SqlCommand labelCommand = new SqlCommand("select StudentNo,StudentName,StudentSurname from Students where StudentNo=@OgrNo", connection);
 
             labelCommand.Parameters.AddWithValue("@OgrNo", Form1.OgrNo);
 
-            baglanti.Open();
+            connection.Open();
 
             labelCommand.ExecuteNonQuery();
 
@@ -43,15 +44,15 @@ namespace Obs_AdoNet.Ogrenci
 
             reader.Close();
 
-            baglanti.Close();
+            connection.Close();
         }
 
         private void dataGridLessonValues()
         {
 
-            baglanti.Open();
+            connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select StudentName,StudentSurname,LessonName,TeacherName,TeacherSurname from Students inner join TransitionLesson on TransitionLesson.StudentId = Students.Id inner join Lessons on TransitionLesson.LessonId = Lessons.Id inner join Teachers on Teachers.Id = TransitionLesson.TeacherId where StudentNo = @ogrNo", baglanti);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonDate,LessonTime,LessonName,TeacherName,TeacherSurname from Students inner join TransitionLesson on TransitionLesson.StudentId = Students.Id inner join Lessons on TransitionLesson.LessonId = Lessons.Id inner join Teachers on Teachers.Id = TransitionLesson.TeacherId where StudentNo = @ogrNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -63,14 +64,14 @@ namespace Obs_AdoNet.Ogrenci
 
             dtgStudentLessonProgram.DataSource = dataTable;
 
-            baglanti.Close();
+            connection.Close();
         }
 
         private void dataGridExamValues() 
         {
-            baglanti.Open();
+            connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select StudentName,StudentSurname,LessonName,Midterm,Final,ExamAvg from Students inner join Exam_Results on Students.Id =  Exam_Results.StudentId inner join Lessons  on Lessons.Id =  Exam_Results.LessonId where StudentNo = @ogrno", baglanti);
+            SqlCommand dtgLessonCommand = new SqlCommand("select StudentName,StudentSurname,LessonName,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.Id =  Exam_Results.StudentId inner join Lessons  on Lessons.Id =  Exam_Results.LessonId where StudentNo = @ogrno", connection);
 
             SqlDataAdapter dtgExamAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -82,7 +83,7 @@ namespace Obs_AdoNet.Ogrenci
 
             dtgExamResult.DataSource = dataTable;
 
-            baglanti.Close();
+            connection.Close();
         }
 
         private void Ogrenci_Ekrani_Load(object sender, EventArgs e)
@@ -95,6 +96,13 @@ namespace Obs_AdoNet.Ogrenci
             dataGridExamValues();
 
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }

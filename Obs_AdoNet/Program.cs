@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Obs_AdoNet.Teacher;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace Obs_AdoNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Teacher_Exam_Input());
+            //Application.Run(new Teacher_Screen());
+
         }
     }
 }

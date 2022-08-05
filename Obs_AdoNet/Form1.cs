@@ -23,7 +23,7 @@ namespace Obs_AdoNet
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             OgrNo=Convert.ToInt32(txtStudentNo.Text);
-            Ogrenci_Ekrani ogrenci_Ekrani = new Ogrenci_Ekrani();
+            Student_Screen ogrenci_Ekrani = new Student_Screen();
             ogrenci_Ekrani.Show();
             this.Hide();
 
