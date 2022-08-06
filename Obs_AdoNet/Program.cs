@@ -17,8 +17,10 @@ namespace Obs_AdoNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Teacher_Exam_Input());
+            Application.Run(new Form1());
             //Application.Run(new Teacher_Screen());
+            // Application.Run(new Teacher_Exam_Input());
+
 
         }
     }

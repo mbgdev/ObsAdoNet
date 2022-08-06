@@ -25,7 +25,9 @@ namespace Obs_AdoNet.Teacher
             lblDate.Text = DateTime.Now.ToLongDateString();
             lblHours.Text = DateTime.Now.ToLongTimeString();
 
-            SqlCommand labelCommand = new SqlCommand("select TeacherNo,TeacherName,TeacherSurname from Teachers where TeacherNo=20222001", connection);
+            SqlCommand labelCommand = new SqlCommand("select TeacherNo,TeacherName,TeacherSurname from Teachers where TeacherNo=@teacherNo", connection);
+
+            labelCommand.Parameters.AddWithValue("@teacherNo", Form1.TeacherNo);
 
             connection.Open();
 
@@ -51,11 +53,11 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select distinct LessonName, LessonDate, LessonTime, TeacherName, TeacherSurname  from Teachers inner join TransitionLesson  on TransitionLesson.TeacherId = Teachers.Id  inner join  Lessons  on Lessons.Id = TransitionLesson.LessonId where TeacherNo = 20222001", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select distinct LessonName, LessonDate, LessonTime, TeacherName, TeacherSurname  from Teachers inner join TransitionLesson  on TransitionLesson.TeacherId = Teachers.Id  inner join  Lessons  on Lessons.Lesson_Id = TransitionLesson.LessonId where TeacherNo = @teacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
-            //dtgLessonAdapter.SelectCommand.Parameters.AddWithValue("@OgrNo", Form1.OgrNo);
+            dtgLessonAdapter.SelectCommand.Parameters.AddWithValue("@teacherNo", Form1.TeacherNo);
 
             DataTable dataTable = new DataTable();
 
@@ -70,11 +72,11 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName,StudentNo, StudentName,StudentSurname from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons  on Lessons.Id = Exam_Results.LessonId where LessonName = 'Matematik'", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where TeacherNo = @teacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
-            //dtgLessonAdapter.SelectCommand.Parameters.AddWithValue("@OgrNo", Form1.OgrNo);
+            dtgLessonAdapter.SelectCommand.Parameters.AddWithValue("@teacherNo", Form1.TeacherNo);
 
             DataTable dataTable = new DataTable();
 
@@ -106,5 +108,7 @@ namespace Obs_AdoNet.Teacher
             this.Hide();
 
         }
+
+      
     }
 }
