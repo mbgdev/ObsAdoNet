@@ -31,6 +31,7 @@
             this.btnStudentProcess = new System.Windows.Forms.Button();
             this.btnTeacherProcess = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStudentProcess
@@ -42,6 +43,7 @@
             this.btnStudentProcess.TabIndex = 0;
             this.btnStudentProcess.Text = "Öğrenci İşlemleri";
             this.btnStudentProcess.UseVisualStyleBackColor = true;
+            this.btnStudentProcess.Click += new System.EventHandler(this.btnStudentProcess_Click);
             // 
             // btnTeacherProcess
             // 
@@ -63,11 +65,23 @@
             this.button2.Text = "Personel İşlemleri";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.Location = new System.Drawing.Point(677, 26);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(127, 45);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Personel_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnTeacherProcess);
             this.Controls.Add(this.btnStudentProcess);
@@ -82,5 +96,6 @@
         private System.Windows.Forms.Button btnStudentProcess;
         private System.Windows.Forms.Button btnTeacherProcess;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBack;
     }
 }

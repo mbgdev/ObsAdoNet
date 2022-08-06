@@ -16,5 +16,19 @@ namespace Obs_AdoNet.Personel
         {
             InitializeComponent();
         }
+
+        private void btnStudentProcess_Click(object sender, EventArgs e)
+        {
+            Personel_Student_Process personel_Student_Process = new Personel_Student_Process();
+            personel_Student_Process.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
