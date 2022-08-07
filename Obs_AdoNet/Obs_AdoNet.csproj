@@ -76,6 +76,24 @@
     <Compile Include="Personel\Students\Personel_Student_Process_Update.Designer.cs">
       <DependentUpon>Personel_Student_Process_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personel\Teachers\Personel_Teacher_Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Teachers\Personel_Teacher_Process.Designer.cs">
+      <DependentUpon>Personel_Teacher_Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Teachers\Personel_Teacher_Process_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Teachers\Personel_Teacher_Process_Add.Designer.cs">
+      <DependentUpon>Personel_Teacher_Process_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Teachers\Personel_Teacher_Process_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Teachers\Personel_Teacher_Process_Update.Designer.cs">
+      <DependentUpon>Personel_Teacher_Process_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\Student_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +128,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\Students\Personel_Student_Process_Update.resx">
       <DependentUpon>Personel_Student_Process_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Teachers\Personel_Teacher_Process.resx">
+      <DependentUpon>Personel_Teacher_Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Teachers\Personel_Teacher_Process_Add.resx">
+      <DependentUpon>Personel_Teacher_Process_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Teachers\Personel_Teacher_Process_Update.resx">
+      <DependentUpon>Personel_Teacher_Process_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Student_Screen.resx">
       <DependentUpon>Student_Screen.cs</DependentUpon>

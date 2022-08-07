@@ -56,6 +56,7 @@
             // 
             // dtgStudentList
             // 
+            this.dtgStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgStudentList.Location = new System.Drawing.Point(56, 216);
             this.dtgStudentList.Name = "dtgStudentList";
@@ -180,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1301, 591);
+            this.ClientSize = new System.Drawing.Size(1338, 591);
             this.Controls.Add(this.BtnStudentUpdate);
             this.Controls.Add(this.btnStudentAdd);
             this.Controls.Add(this.btnStudentList);

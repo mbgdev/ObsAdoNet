@@ -54,6 +54,7 @@
             this.btnTeacherProcess.TabIndex = 1;
             this.btnTeacherProcess.Text = "Öğretmen İşlemleri";
             this.btnTeacherProcess.UseVisualStyleBackColor = true;
+            this.btnTeacherProcess.Click += new System.EventHandler(this.btnTeacherProcess_Click);
             // 
             // button2
             // 

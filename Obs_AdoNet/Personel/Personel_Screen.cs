@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Obs_AdoNet.Personel.Teachers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,13 @@ namespace Obs_AdoNet.Personel
         {
             Form1 frm = new Form1();
             frm.Show();
+            this.Hide();
+        }
+
+        private void btnTeacherProcess_Click(object sender, EventArgs e)
+        {
+            Personel_Teacher_Process personel_Teacher_Process = new Personel_Teacher_Process();
+            personel_Teacher_Process.Show();
             this.Hide();
         }
     }
