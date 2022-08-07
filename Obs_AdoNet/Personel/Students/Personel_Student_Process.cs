@@ -104,5 +104,17 @@ namespace Obs_AdoNet.Personel
             personel_Student_Process_Add.Show();
             this.Hide();
         }
+
+        private void BtnStudentUpdate_Click(object sender, EventArgs e)
+        {
+            Personel_Student_Process_Update personel_Student_Process_Update = new Personel_Student_Process_Update();
+            personel_Student_Process_Update.Show();
+            this.Hide();
+        }
+
+        private void btnActivePasive_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

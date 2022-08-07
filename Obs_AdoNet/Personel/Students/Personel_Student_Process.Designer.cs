@@ -40,6 +40,7 @@
             this.btnSearchStudentNo = new System.Windows.Forms.Button();
             this.btnStudentList = new System.Windows.Forms.Button();
             this.btnStudentAdd = new System.Windows.Forms.Button();
+            this.BtnStudentUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             this.lblPersonelNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPersonelNo.Location = new System.Drawing.Point(63, 40);
             this.lblPersonelNo.Name = "lblPersonelNo";
-            this.lblPersonelNo.Size = new System.Drawing.Size(145, 34);
+            this.lblPersonelNo.Size = new System.Drawing.Size(116, 27);
             this.lblPersonelNo.TabIndex = 2;
             this.lblPersonelNo.Text = "20223000";
             // 
@@ -99,7 +100,7 @@
             this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDate.Location = new System.Drawing.Point(400, 40);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(421, 34);
+            this.lblDate.Size = new System.Drawing.Size(337, 27);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "1 Ağustos 2022 Cumaertesi";
             // 
@@ -164,11 +165,23 @@
             this.btnStudentAdd.UseVisualStyleBackColor = true;
             this.btnStudentAdd.Click += new System.EventHandler(this.btnStudentAdd_Click);
             // 
+            // BtnStudentUpdate
+            // 
+            this.BtnStudentUpdate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnStudentUpdate.Location = new System.Drawing.Point(537, 503);
+            this.BtnStudentUpdate.Name = "BtnStudentUpdate";
+            this.BtnStudentUpdate.Size = new System.Drawing.Size(200, 42);
+            this.BtnStudentUpdate.TabIndex = 12;
+            this.BtnStudentUpdate.Text = "Düzenleme";
+            this.BtnStudentUpdate.UseVisualStyleBackColor = true;
+            this.BtnStudentUpdate.Click += new System.EventHandler(this.BtnStudentUpdate_Click);
+            // 
             // Personel_Student_Process
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1301, 591);
+            this.Controls.Add(this.BtnStudentUpdate);
             this.Controls.Add(this.btnStudentAdd);
             this.Controls.Add(this.btnStudentList);
             this.Controls.Add(this.btnSearchStudentNo);
@@ -204,5 +217,6 @@
         private System.Windows.Forms.Button btnSearchStudentNo;
         private System.Windows.Forms.Button btnStudentList;
         private System.Windows.Forms.Button btnStudentAdd;
+        private System.Windows.Forms.Button BtnStudentUpdate;
     }
 }
