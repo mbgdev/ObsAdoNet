@@ -110,5 +110,12 @@ namespace Obs_AdoNet.Personel.Personel
             personel_Personel_Process_Update.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Personel_Screen personelProcess = new Personel_Screen();
+            personelProcess.Show();
+            this.Close();
+        }
     }
 }

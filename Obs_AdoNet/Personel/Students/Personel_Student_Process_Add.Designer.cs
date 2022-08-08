@@ -297,7 +297,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(46, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1284, 20);
+            this.label5.Size = new System.Drawing.Size(1027, 16);
             this.label5.TabIndex = 31;
             this.label5.Text = resources.GetString("label5.Text");
             // 
@@ -332,7 +332,7 @@
             this.Controls.Add(this.lblPersonelName);
             this.Controls.Add(this.lblPersonelNo);
             this.Name = "Personel_Student_Process_Add";
-            this.Text = "Personel_Student_Process_Add";
+            this.Text = "Öğrenci Ekleme Ekranı";
             this.Load += new System.EventHandler(this.Personel_Student_Process_Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).EndInit();
             this.ResumeLayout(false);

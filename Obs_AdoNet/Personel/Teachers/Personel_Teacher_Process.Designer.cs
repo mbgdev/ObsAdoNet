@@ -41,6 +41,7 @@
             this.lblPersonelNo = new System.Windows.Forms.Label();
             this.lblList = new System.Windows.Forms.Label();
             this.dtgTeachersList = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTeachersList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +103,7 @@
             this.lblSerachTeacherNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSerachTeacherNo.Location = new System.Drawing.Point(1033, 230);
             this.lblSerachTeacherNo.Name = "lblSerachTeacherNo";
-            this.lblSerachTeacherNo.Size = new System.Drawing.Size(226, 34);
+            this.lblSerachTeacherNo.Size = new System.Drawing.Size(181, 27);
             this.lblSerachTeacherNo.TabIndex = 20;
             this.lblSerachTeacherNo.Text = "Öğretmen No: ";
             // 
@@ -162,7 +163,7 @@
             this.lblList.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblList.Location = new System.Drawing.Point(35, 143);
             this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(275, 34);
+            this.lblList.Size = new System.Drawing.Size(220, 27);
             this.lblList.TabIndex = 13;
             this.lblList.Text = "Öğretmen Listesi";
             // 
@@ -176,11 +177,23 @@
             this.dtgTeachersList.Size = new System.Drawing.Size(977, 267);
             this.dtgTeachersList.TabIndex = 26;
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.Location = new System.Drawing.Point(1111, 29);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(135, 53);
+            this.btnBack.TabIndex = 32;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Personel_Teacher_Process
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 588);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dtgTeachersList);
             this.Controls.Add(this.BtnTeacherUpdate);
             this.Controls.Add(this.btnTeacherAdd);
@@ -195,7 +208,7 @@
             this.Controls.Add(this.lblPersonelNo);
             this.Controls.Add(this.lblList);
             this.Name = "Personel_Teacher_Process";
-            this.Text = "Personel_Teacher_Process";
+            this.Text = "Öğretmen İşlemleri Ekranı";
             this.Load += new System.EventHandler(this.Personel_Teacher_Process_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTeachersList)).EndInit();
             this.ResumeLayout(false);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.Label lblPersonelNo;
         private System.Windows.Forms.Label lblList;
         private System.Windows.Forms.DataGridView dtgTeachersList;
+        private System.Windows.Forms.Button btnBack;
     }
 }

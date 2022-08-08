@@ -83,7 +83,7 @@
             this.label3.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(37, 442);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(275, 34);
+            this.label3.Size = new System.Drawing.Size(220, 27);
             this.label3.TabIndex = 54;
             this.label3.Text = "Öğretmen Listesi";
             // 
@@ -247,7 +247,7 @@
             this.LblTeacherNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblTeacherNo.Location = new System.Drawing.Point(34, 87);
             this.LblTeacherNo.Name = "LblTeacherNo";
-            this.LblTeacherNo.Size = new System.Drawing.Size(210, 34);
+            this.LblTeacherNo.Size = new System.Drawing.Size(168, 27);
             this.LblTeacherNo.TabIndex = 37;
             this.LblTeacherNo.Text = "Öğretmen No:";
             // 
@@ -332,7 +332,7 @@
             this.Controls.Add(this.lblPersonelName);
             this.Controls.Add(this.lblPersonelNo);
             this.Name = "Personel_Teacher_Process_Add";
-            this.Text = "Personel_Teacher_Process_Add";
+            this.Text = "Öğretmen Ekleme Ekranı";
             this.Load += new System.EventHandler(this.Personel_Teacher_Process_Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTeacherList)).EndInit();
             this.ResumeLayout(false);

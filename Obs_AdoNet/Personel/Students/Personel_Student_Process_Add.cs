@@ -111,11 +111,11 @@ namespace Obs_AdoNet.Personel
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Personel_Student_Process personel_Student_Process = new Personel_Student_Process();
+            Personel_Process personel_Student_Process = new Personel_Process();
 
             personel_Student_Process.Show();
 
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -77,7 +77,7 @@ namespace Obs_AdoNet.Personel.Personel
         {
             Personel_Personel_Process personel_Personel_Process = new Personel_Personel_Process();
             personel_Personel_Process.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

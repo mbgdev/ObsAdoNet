@@ -1,4 +1,5 @@
-﻿using Obs_AdoNet.Personel.Teachers;
+﻿using Obs_AdoNet.Personel.Personel;
+using Obs_AdoNet.Personel.Teachers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace Obs_AdoNet.Personel
 
         private void btnStudentProcess_Click(object sender, EventArgs e)
         {
-            Personel_Student_Process personel_Student_Process = new Personel_Student_Process();
+            Personel_Process personel_Student_Process = new Personel_Process();
             personel_Student_Process.Show();
             this.Hide();
         }
@@ -29,13 +30,20 @@ namespace Obs_AdoNet.Personel
         {
             Form1 frm = new Form1();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnTeacherProcess_Click(object sender, EventArgs e)
         {
             Personel_Teacher_Process personel_Teacher_Process = new Personel_Teacher_Process();
             personel_Teacher_Process.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Personel_Personel_Process personel_Personel_Process = new Personel_Personel_Process();
+            personel_Personel_Process.Show();
             this.Hide();
         }
     }

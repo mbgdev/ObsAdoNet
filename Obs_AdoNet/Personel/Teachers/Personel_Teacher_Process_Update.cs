@@ -150,7 +150,7 @@ namespace Obs_AdoNet.Personel.Teachers
         {
             Personel_Teacher_Process personel_Teacher_Process = new Personel_Teacher_Process();
             personel_Teacher_Process.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

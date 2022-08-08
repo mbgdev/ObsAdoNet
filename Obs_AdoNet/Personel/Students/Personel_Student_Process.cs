@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Obs_AdoNet.Personel
 {
-    public partial class Personel_Student_Process : Form
+    public partial class Personel_Process : Form
     {
-        public Personel_Student_Process()
+        public Personel_Process()
         {
             InitializeComponent();
         }
@@ -113,6 +113,11 @@ namespace Obs_AdoNet.Personel
             this.Hide();
         }
 
-       
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Personel_Screen personelProcess = new Personel_Screen();
+            personelProcess.Show();
+            this.Close();
+        }
     }
 }

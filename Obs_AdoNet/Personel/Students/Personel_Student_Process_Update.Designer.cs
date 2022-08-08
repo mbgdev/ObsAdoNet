@@ -345,7 +345,7 @@
             this.Controls.Add(this.lblPersonelName);
             this.Controls.Add(this.lblPersonelNo);
             this.Name = "Personel_Student_Process_Update";
-            this.Text = "Personel_Student_Process_Update";
+            this.Text = "Öğrenci Güncelleme Ekranı";
             this.Load += new System.EventHandler(this.Personel_Student_Process_Update_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).EndInit();
             this.ResumeLayout(false);

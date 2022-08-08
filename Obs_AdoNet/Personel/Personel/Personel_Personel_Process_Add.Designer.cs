@@ -332,7 +332,7 @@
             this.Controls.Add(this.lblPersonelName);
             this.Controls.Add(this.lblPersonelNo);
             this.Name = "Personel_Personel_Process_Add";
-            this.Text = "Personel_Personel_Process_Add";
+            this.Text = "Personel Kaydetme Ekranı";
             this.Load += new System.EventHandler(this.Personel_Personel_Process_Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonellList)).EndInit();
             this.ResumeLayout(false);

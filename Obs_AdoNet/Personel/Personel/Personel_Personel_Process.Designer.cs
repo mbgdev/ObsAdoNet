@@ -41,6 +41,7 @@
             this.lblPersonelNo = new System.Windows.Forms.Label();
             this.dtgPersonelList = new System.Windows.Forms.DataGridView();
             this.lblList = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonelList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,11 +177,23 @@
             this.lblList.TabIndex = 13;
             this.lblList.Text = "Personel Listesi";
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.Location = new System.Drawing.Point(1102, 38);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(135, 53);
+            this.btnBack.TabIndex = 32;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Personel_Personel_Process
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 580);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.BtnPersonelUpdate);
             this.Controls.Add(this.btnPersonelAdd);
             this.Controls.Add(this.btnPersonelList);
@@ -195,7 +208,7 @@
             this.Controls.Add(this.dtgPersonelList);
             this.Controls.Add(this.lblList);
             this.Name = "Personel_Personel_Process";
-            this.Text = "Personel_Personel_Process";
+            this.Text = "Personel İşlemleri Ekranı";
             this.Load += new System.EventHandler(this.Personel_Personel_Process_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonelList)).EndInit();
             this.ResumeLayout(false);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.Label lblPersonelNo;
         private System.Windows.Forms.DataGridView dtgPersonelList;
         private System.Windows.Forms.Label lblList;
+        private System.Windows.Forms.Button btnBack;
     }
 }

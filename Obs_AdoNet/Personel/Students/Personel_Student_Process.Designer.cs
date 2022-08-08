@@ -1,6 +1,6 @@
 ﻿namespace Obs_AdoNet.Personel
 {
-    partial class Personel_Student_Process
+    partial class Personel_Process
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.btnStudentList = new System.Windows.Forms.Button();
             this.btnStudentAdd = new System.Windows.Forms.Button();
             this.BtnStudentUpdate = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,11 +178,23 @@
             this.BtnStudentUpdate.UseVisualStyleBackColor = true;
             this.BtnStudentUpdate.Click += new System.EventHandler(this.BtnStudentUpdate_Click);
             // 
-            // Personel_Student_Process
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.Location = new System.Drawing.Point(1160, 40);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(135, 53);
+            this.btnBack.TabIndex = 31;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // Personel_Process
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 591);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.BtnStudentUpdate);
             this.Controls.Add(this.btnStudentAdd);
             this.Controls.Add(this.btnStudentList);
@@ -195,8 +208,8 @@
             this.Controls.Add(this.lblPersonelNo);
             this.Controls.Add(this.dtgStudentList);
             this.Controls.Add(this.lblList);
-            this.Name = "Personel_Student_Process";
-            this.Text = "Personel_Student_Process";
+            this.Name = "Personel_Process";
+            this.Text = "Öğrenci işleri Ekranı";
             this.Load += new System.EventHandler(this.Personel_Student_Process_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).EndInit();
             this.ResumeLayout(false);
@@ -219,5 +232,6 @@
         private System.Windows.Forms.Button btnStudentList;
         private System.Windows.Forms.Button btnStudentAdd;
         private System.Windows.Forms.Button BtnStudentUpdate;
+        private System.Windows.Forms.Button btnBack;
     }
 }

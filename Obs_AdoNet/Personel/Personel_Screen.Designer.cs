@@ -65,6 +65,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Personel İşlemleri";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnBack
             // 
@@ -87,7 +88,7 @@
             this.Controls.Add(this.btnTeacherProcess);
             this.Controls.Add(this.btnStudentProcess);
             this.Name = "Personel_Screen";
-            this.Text = "Personel_Screen";
+            this.Text = "Personel Ekranı";
             this.ResumeLayout(false);
 
         }

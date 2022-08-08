@@ -345,7 +345,7 @@
             this.Controls.Add(this.lblPersonelName);
             this.Controls.Add(this.lblPersonelNo);
             this.Name = "Personel_Personel_Process_Update";
-            this.Text = "Personel_Personel_Process_Update";
+            this.Text = "Personel Güncelleme Ekranı";
             this.Load += new System.EventHandler(this.Personel_Personel_Process_Update_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonelList)).EndInit();
             this.ResumeLayout(false);
