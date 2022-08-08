@@ -28,7 +28,7 @@ namespace Obs_AdoNet.Personel
             lblHours.Text = DateTime.Now.ToLongTimeString();
             connection.Open();
 
-            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,Name,Surname from Personnels where PersonnelNo=20223001", connection);
+            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=20223001", connection);
 
             labelCommand.ExecuteNonQuery();
 
@@ -37,8 +37,8 @@ namespace Obs_AdoNet.Personel
             while (reader.Read())
             {
                 lblPersonelNo.Text = reader["PersonnelNo"].ToString();
-                lblPersonelName.Text = reader["Name"].ToString();
-                lblPersonelSurname.Text = reader["Surname"].ToString();
+                lblPersonelName.Text = reader["PersonnelName"].ToString();
+                lblPersonelSurname.Text = reader["PersonnelSurname"].ToString();
             }
 
             reader.Close();
@@ -47,6 +47,7 @@ namespace Obs_AdoNet.Personel
 
 
         }
+
 
         private void DtgStudentList()
         {

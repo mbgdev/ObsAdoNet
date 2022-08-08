@@ -9,17 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Obs_AdoNet.Personel
+namespace Obs_AdoNet.Personel.Personel
 {
-    public partial class Personel_Student_Process_Update : Form
+    public partial class Personel_Personel_Process_Update : Form
     {
-        public Personel_Student_Process_Update()
+        public Personel_Personel_Process_Update()
         {
             InitializeComponent();
         }
 
 
+
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
+
         private void LabelValues()
         {
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -47,11 +49,12 @@ namespace Obs_AdoNet.Personel
 
         }
 
-        private void DtgStudentList()
+
+        private void DtgPersonnelList()
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("select * from Students order by Id desc", connection);
+            SqlCommand command = new SqlCommand("select * from Personnels order by Id desc", connection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -59,26 +62,39 @@ namespace Obs_AdoNet.Personel
 
             adapter.Fill(dataTable);
 
-            dtgStudentList.DataSource = dataTable;
+            dtgPersonelList.DataSource = dataTable;
 
             connection.Close();
         }
 
+        private void Personel_Personel_Process_Update_Load(object sender, EventArgs e)
+        {
+            LabelValues();
+            DtgPersonnelList();
+        }
 
+       
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            Personel_Personel_Process personel_Personel_Process = new Personel_Personel_Process();
+            personel_Personel_Process.Show();
+            this.Hide();
+        }
 
         private void BtnStudentGet_Click(object sender, EventArgs e)
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("Select * from Students where StudentNo='" + txtStudentNo.Text + "'", connection);
+            SqlCommand command = new SqlCommand("Select * from Personnels where PersonnelNo='" + txtPersonelNo.Text + "'", connection);
             SqlDataReader reader = command.ExecuteReader();
-            while(reader.Read())
+            while (reader.Read())
             {
-                txtStudentName.Text = reader["StudentName"].ToString();
-                txtStudentSurname.Text = reader["StudentSurname"].ToString();
-                txtStudentEmail.Text = reader["StudentEmail"].ToString();
-                txtStudentPhone.Text = reader["StudentPhone"].ToString();
-                rtxtAdress.Text = reader["StudentAdress"].ToString();
+                txtPersonelName.Text = reader["PersonnelName"].ToString();
+                txtPersonelSurname.Text = reader["PersonnelSurname"].ToString();
+                txtPersonelEmail.Text = reader["PersonnelEmail"].ToString();
+                txtPersonelPhone.Text = reader["PersonnelPhone"].ToString();
+                rtxtAdress.Text = reader["PersonnelAdress"].ToString();
                 string st = reader["Status1"].ToString();
 
 
@@ -88,22 +104,16 @@ namespace Obs_AdoNet.Personel
             connection.Close();
         }
 
-        private void Personel_Student_Process_Update_Load(object sender, EventArgs e)
-        {
-            LabelValues();
-            DtgStudentList();
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("update Students set  " +
-                "StudentName=@StudentName, " +
-                "StudentSurname=@StudentSurname," +
-                "StudentEmail=@StudentEmail," +
-                "StudentAdress=@StudentAdress," +
-                "StudentPhone=@StudentPhone," +
+            SqlCommand command = new SqlCommand("update Personnels set  " +
+                "PersonnelName=@PersonnelName, " +
+                "PersonnelSurname=@PersonnelSurname," +
+                "PersonnelEmail=@PersonnelEmail," +
+                "PersonnelAdress=@PersonnelAdress," +
+                "PersonnelPhone=@PersonnelPhone," +
                 "CreatedDate=@CreatedDate," +
                 "ModifiedDate=@ModifiedDate," +
                 "StatusDate=@StatusDate," +
@@ -111,14 +121,14 @@ namespace Obs_AdoNet.Personel
                 "ModifiedUserId=@ModifiedUserId," +
                 "StatusUserId=@StatusUserId," +
                 "Status1=@Status1" +
-                "  where StudentNo=@StudentNo", connection);
+                "  where PersonnelNo=@PersonnelNo", connection);
 
-            command.Parameters.AddWithValue("@StudentNo", txtStudentNo.Text);
-            command.Parameters.AddWithValue("@StudentName", txtStudentName.Text);
-            command.Parameters.AddWithValue("@StudentSurname", txtStudentSurname.Text);
-            command.Parameters.AddWithValue("@StudentEmail", txtStudentEmail.Text);
-            command.Parameters.AddWithValue("@StudentPhone", txtStudentPhone.Text);
-            command.Parameters.AddWithValue("@StudentAdress", rtxtAdress.Text);
+            command.Parameters.AddWithValue("@PersonnelNo", txtPersonelNo.Text);
+            command.Parameters.AddWithValue("@PersonnelName", txtPersonelName.Text);
+            command.Parameters.AddWithValue("@PersonnelSurname", txtPersonelSurname.Text);
+            command.Parameters.AddWithValue("@PersonnelEmail", txtPersonelEmail.Text);
+            command.Parameters.AddWithValue("@PersonnelPhone", txtPersonelPhone.Text);
+            command.Parameters.AddWithValue("@PersonnelAdress", rtxtAdress.Text);
             command.Parameters.AddWithValue("@CreatedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@ModifiedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@StatusDate", DateTime.Now.ToShortDateString());
@@ -143,14 +153,7 @@ namespace Obs_AdoNet.Personel
             command.ExecuteNonQuery();
             MessageBox.Show("Ürün başarılı bir şekilde sisteme güncellendi.");
             connection.Close();
-            DtgStudentList();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Personel_Student_Process personel_Student_Process = new Personel_Student_Process();
-            personel_Student_Process.Show();
-            this.Hide();
+            DtgPersonnelList();
         }
     }
 }

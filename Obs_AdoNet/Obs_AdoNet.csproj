@@ -52,6 +52,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personel\Personel\Personel_Personel_Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Personel\Personel_Personel_Process.Designer.cs">
+      <DependentUpon>Personel_Personel_Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Personel\Personel_Personel_Process_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Personel\Personel_Personel_Process_Add.Designer.cs">
+      <DependentUpon>Personel_Personel_Process_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Personel\Personel_Personel_Process_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Personel\Personel_Personel_Process_Update.Designer.cs">
+      <DependentUpon>Personel_Personel_Process_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personel\Personel_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +134,15 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Personel\Personel_Personel_Process.resx">
+      <DependentUpon>Personel_Personel_Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Personel\Personel_Personel_Process_Add.resx">
+      <DependentUpon>Personel_Personel_Process_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Personel\Personel_Personel_Process_Update.resx">
+      <DependentUpon>Personel_Personel_Process_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\Personel_Screen.resx">
       <DependentUpon>Personel_Screen.cs</DependentUpon>

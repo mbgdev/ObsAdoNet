@@ -9,14 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Obs_AdoNet.Personel.Teachers
+namespace Obs_AdoNet.Personel.Personel
 {
-    public partial class Personel_Teacher_Process : Form
+    public partial class Personel_Personel_Process : Form
     {
-        public Personel_Teacher_Process()
+        public Personel_Personel_Process()
         {
             InitializeComponent();
         }
+
+
 
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
 
@@ -47,11 +49,12 @@ namespace Obs_AdoNet.Personel.Teachers
 
         }
 
-        private void DtgTeacherList()
+
+        private void DtgPersonelList()
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("select * from Teachers", connection);
+            SqlCommand command = new SqlCommand("select * from Personnels", connection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -59,52 +62,52 @@ namespace Obs_AdoNet.Personel.Teachers
 
             adapter.Fill(dataTable);
 
-            dtgTeachersList.DataSource = dataTable;
+            dtgPersonelList.DataSource = dataTable;
 
             connection.Close();
         }
 
-        private void Personel_Teacher_Process_Load(object sender, EventArgs e)
+        private void Personel_Personel_Process_Load(object sender, EventArgs e)
         {
             LabelValues();
-            DtgTeacherList();
+            DtgPersonelList();
         }
 
-        private void btnSearchTeacherNo_Click(object sender, EventArgs e)
+        private void btnSearchPersonelNo_Click(object sender, EventArgs e)
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("select * from Teachers where TeacherNo=@TeacherNo", connection);
+            SqlCommand command = new SqlCommand("select * from Personnels where PersonnelNo=@PersonnelNo", connection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-            adapter.SelectCommand.Parameters.AddWithValue("@TeacherNo", txtSearchTeacherNo.Text);
+            adapter.SelectCommand.Parameters.AddWithValue("@PersonnelNo", txtSearchPersonelNo.Text);
 
             DataTable dataTable = new DataTable();
 
             adapter.Fill(dataTable);
 
-            dtgTeachersList.DataSource = dataTable;
+            dtgPersonelList.DataSource = dataTable;
 
             connection.Close();
         }
 
-        private void btnTeacherList_Click(object sender, EventArgs e)
+        private void btnPersonelList_Click(object sender, EventArgs e)
         {
-            DtgTeacherList();
+            DtgPersonelList();
         }
 
-        private void btnTeacherAdd_Click(object sender, EventArgs e)
+        private void btnPersonelAdd_Click(object sender, EventArgs e)
         {
-            Personel_Teacher_Process_Add personel_Teacher_Process_Add = new Personel_Teacher_Process_Add();
-            personel_Teacher_Process_Add.Show();
+            Personel_Personel_Process_Add personel_Personel_Process_Add =new Personel_Personel_Process_Add();
+            personel_Personel_Process_Add.Show();
             this.Hide();
         }
 
-        private void BtnTeacherUpdate_Click(object sender, EventArgs e)
+        private void BtnPersonelUpdate_Click(object sender, EventArgs e)
         {
-            Personel_Teacher_Process_Update personel_Teacher_Process_Update= new Personel_Teacher_Process_Update();
-            personel_Teacher_Process_Update.Show();
+            Personel_Personel_Process_Update personel_Personel_Process_Update = new Personel_Personel_Process_Update();
+            personel_Personel_Process_Update.Show();
             this.Hide();
         }
     }
