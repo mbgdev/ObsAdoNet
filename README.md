@@ -12,6 +12,7 @@ Müşteri  yeni açacağı iş yeri için bir obs sistemine benzer bir sistem is
 ##### Sistem
 Sistem .NetFramework 4.8 sürümü ile yapılmıştır.
 
+#
 
 ### Giriş Ekranı
 
