@@ -58,6 +58,12 @@ namespace Obs_AdoNet.Personel.Lesson
             DataTable dataTable = new DataTable();
 
             adapter.Fill(dataTable);
+            dataTable.Columns["LessonDate"].ColumnName = "Ders_Günü";
+            dataTable.Columns["LessonTime"].ColumnName = "Ders_Saati";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["TeacherName"].ColumnName = "Öğretmen_Adı";
+            dataTable.Columns["TeacherSurname"].ColumnName = "Öğretmen_Soyadı";
+            dataTable.AcceptChanges();
 
             dtgLessonList.DataSource = dataTable;
 

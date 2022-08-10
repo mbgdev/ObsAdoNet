@@ -54,14 +54,13 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo, StudentName, StudentSurname from Students " +
-               "inner join TransitionLesson " +
-               "on TransitionLesson.StudentId = Students.StudentId " +
-               "inner join Teachers " +
-               "on Teachers.TeacherId = TransitionLesson.TeacherId " +
-               "inner join Lessons " +
-               "on Lessons.Lesson_Id = TransitionLesson.LessonId " +
-               "where TeacherNo = @teacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results " +
+                        "on Students.StudentId = Exam_Results.StudentIdd" +
+                        " inner join Lessons " +
+                        "on Lessons.Lesson_Id = Exam_Results.LessonId " +
+                        "inner join Teachers " +
+                        "on Teachers.TeacherId = Exam_Results.TeacherId " +
+                        "where TeacherNo=@TeacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -72,6 +71,15 @@ namespace Obs_AdoNet.Teacher
             DataTable dataTable = new DataTable();
 
             dtgLessonAdapter.Fill(dataTable);
+            dataTable.Columns["StudentName"].ColumnName = "Öğrenci_Adı";
+            dataTable.Columns["StudentNo"].ColumnName = "Öğrenci_No";
+            dataTable.Columns["StudentSurname"].ColumnName = "Öğrenci_Soyadı";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["Midterm"].ColumnName = "Ara_Sınav";
+            dataTable.Columns["Final"].ColumnName = "Final";
+            dataTable.Columns["ExamAvg"].ColumnName = "Ortalama";
+            dataTable.Columns["ExamStatus"].ColumnName = "Ders Durum";
+            dataTable.AcceptChanges();
 
             dtgStudentList.DataSource = dataTable;
 

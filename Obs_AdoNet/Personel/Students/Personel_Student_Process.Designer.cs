@@ -81,25 +81,25 @@
             this.lblPersonelName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPersonelName.Location = new System.Drawing.Point(197, 40);
             this.lblPersonelName.Name = "lblPersonelName";
-            this.lblPersonelName.Size = new System.Drawing.Size(38, 27);
+            this.lblPersonelName.Size = new System.Drawing.Size(80, 34);
             this.lblPersonelName.TabIndex = 3;
-            this.lblPersonelName.Text = "Ad";
+            this.lblPersonelName.Text = "Emir";
             // 
             // lblPersonelSurname
             // 
             this.lblPersonelSurname.AutoSize = true;
             this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelSurname.Location = new System.Drawing.Point(288, 40);
+            this.lblPersonelSurname.Location = new System.Drawing.Point(263, 40);
             this.lblPersonelSurname.Name = "lblPersonelSurname";
             this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
             this.lblPersonelSurname.TabIndex = 4;
-            this.lblPersonelSurname.Text = "Soyad";
+            this.lblPersonelSurname.Text = "Canay";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDate.Location = new System.Drawing.Point(400, 40);
+            this.lblDate.Location = new System.Drawing.Point(366, 40);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(337, 27);
             this.lblDate.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             this.lblHours.AutoSize = true;
             this.lblHours.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHours.Location = new System.Drawing.Point(780, 40);
+            this.lblHours.Location = new System.Drawing.Point(742, 40);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(116, 27);
             this.lblHours.TabIndex = 6;

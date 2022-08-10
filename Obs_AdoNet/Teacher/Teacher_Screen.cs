@@ -64,6 +64,12 @@ namespace Obs_AdoNet.Teacher
             DataTable dataTable = new DataTable();
 
             dtgLessonAdapter.Fill(dataTable);
+            dataTable.Columns["LessonDate"].ColumnName = "Ders_Günü";
+            dataTable.Columns["LessonTime"].ColumnName = "Ders_Saati";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["TeacherName"].ColumnName = "Öğretmen_Adı";
+            dataTable.Columns["TeacherSurname"].ColumnName = "Öğretmen_Soyadı";
+            dataTable.AcceptChanges();
 
             dtgTeacherLessonProgram.DataSource = dataTable;
 
@@ -90,6 +96,12 @@ namespace Obs_AdoNet.Teacher
             DataTable dataTable = new DataTable();
 
             dtgLessonAdapter.Fill(dataTable);
+            dataTable.Columns["StudentName"].ColumnName = "Öğrenci_Adı";
+            dataTable.Columns["StudentSurname"].ColumnName = "Öğrenci_Soyadı";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["StudentNo"].ColumnName = "Öğrenci_No";
+        
+            dataTable.AcceptChanges();
 
             dtgStudentList.DataSource = dataTable;
 

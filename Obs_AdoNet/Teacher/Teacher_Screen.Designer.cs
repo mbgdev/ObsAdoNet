@@ -50,66 +50,66 @@
             this.lblTeacherNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTeacherNo.Location = new System.Drawing.Point(37, 34);
             this.lblTeacherNo.Name = "lblTeacherNo";
-            this.lblTeacherNo.Size = new System.Drawing.Size(155, 27);
+            this.lblTeacherNo.Size = new System.Drawing.Size(116, 27);
             this.lblTeacherNo.TabIndex = 0;
-            this.lblTeacherNo.Text = "Teacher No:";
+            this.lblTeacherNo.Text = "20222000";
             // 
             // lblTeacherName
             // 
             this.lblTeacherName.AutoSize = true;
             this.lblTeacherName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTeacherName.Location = new System.Drawing.Point(237, 34);
+            this.lblTeacherName.Location = new System.Drawing.Point(217, 34);
             this.lblTeacherName.Name = "lblTeacherName";
             this.lblTeacherName.Size = new System.Drawing.Size(77, 27);
             this.lblTeacherName.TabIndex = 1;
-            this.lblTeacherName.Text = "Name:";
+            this.lblTeacherName.Text = "Murat";
             // 
             // lblTeacherSurname
             // 
             this.lblTeacherSurname.AutoSize = true;
             this.lblTeacherSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTeacherSurname.Location = new System.Drawing.Point(329, 34);
+            this.lblTeacherSurname.Location = new System.Drawing.Point(313, 34);
             this.lblTeacherSurname.Name = "lblTeacherSurname";
-            this.lblTeacherSurname.Size = new System.Drawing.Size(220, 27);
+            this.lblTeacherSurname.Size = new System.Drawing.Size(77, 27);
             this.lblTeacherSurname.TabIndex = 2;
-            this.lblTeacherSurname.Text = "Teacher Surname:";
+            this.lblTeacherSurname.Text = "Aydın";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDate.Location = new System.Drawing.Point(576, 34);
+            this.lblDate.Location = new System.Drawing.Point(444, 34);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(285, 27);
+            this.lblDate.Size = new System.Drawing.Size(337, 27);
             this.lblDate.TabIndex = 3;
-            this.lblDate.Text = "1 Ağustos 2022 Cuma :";
+            this.lblDate.Text = "10 Ağustos 2022 Çarşamaba";
             // 
             // lblHours
             // 
             this.lblHours.AutoSize = true;
             this.lblHours.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHours.Location = new System.Drawing.Point(897, 34);
+            this.lblHours.Location = new System.Drawing.Point(838, 34);
             this.lblHours.Name = "lblHours";
-            this.lblHours.Size = new System.Drawing.Size(77, 27);
+            this.lblHours.Size = new System.Drawing.Size(116, 27);
             this.lblHours.TabIndex = 4;
-            this.lblHours.Text = "Saat:";
+            this.lblHours.Text = "00:00:00";
             // 
             // dtgTeacherLessonProgram
             // 
             this.dtgTeacherLessonProgram.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgTeacherLessonProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgTeacherLessonProgram.Location = new System.Drawing.Point(42, 216);
+            this.dtgTeacherLessonProgram.Location = new System.Drawing.Point(24, 216);
             this.dtgTeacherLessonProgram.Name = "dtgTeacherLessonProgram";
             this.dtgTeacherLessonProgram.RowHeadersWidth = 51;
             this.dtgTeacherLessonProgram.RowTemplate.Height = 24;
-            this.dtgTeacherLessonProgram.Size = new System.Drawing.Size(582, 160);
+            this.dtgTeacherLessonProgram.Size = new System.Drawing.Size(707, 160);
             this.dtgTeacherLessonProgram.TabIndex = 5;
             // 
             // lblLessonProgram
             // 
             this.lblLessonProgram.AutoSize = true;
             this.lblLessonProgram.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblLessonProgram.Location = new System.Drawing.Point(55, 159);
+            this.lblLessonProgram.Location = new System.Drawing.Point(37, 159);
             this.lblLessonProgram.Name = "lblLessonProgram";
             this.lblLessonProgram.Size = new System.Drawing.Size(207, 27);
             this.lblLessonProgram.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.lblStudentList.AutoSize = true;
             this.lblStudentList.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStudentList.Location = new System.Drawing.Point(692, 159);
+            this.lblStudentList.Location = new System.Drawing.Point(753, 159);
             this.lblStudentList.Name = "lblStudentList";
             this.lblStudentList.Size = new System.Drawing.Size(233, 27);
             this.lblStudentList.TabIndex = 7;
@@ -129,18 +129,18 @@
             // 
             this.dtgStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgStudentList.Location = new System.Drawing.Point(697, 216);
+            this.dtgStudentList.Location = new System.Drawing.Point(758, 216);
             this.dtgStudentList.Name = "dtgStudentList";
             this.dtgStudentList.RowHeadersWidth = 51;
             this.dtgStudentList.RowTemplate.Height = 24;
-            this.dtgStudentList.Size = new System.Drawing.Size(613, 160);
+            this.dtgStudentList.Size = new System.Drawing.Size(626, 160);
             this.dtgStudentList.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(55, 397);
+            this.label2.Location = new System.Drawing.Point(37, 397);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 27);
             this.label2.TabIndex = 9;
@@ -148,7 +148,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.Location = new System.Drawing.Point(1165, 34);
+            this.btnBack.Location = new System.Drawing.Point(1239, 34);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(145, 50);
             this.btnBack.TabIndex = 10;
@@ -159,7 +159,7 @@
             // btnExamInput
             // 
             this.btnExamInput.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExamInput.Location = new System.Drawing.Point(1165, 111);
+            this.btnExamInput.Location = new System.Drawing.Point(1239, 111);
             this.btnExamInput.Name = "btnExamInput";
             this.btnExamInput.Size = new System.Drawing.Size(145, 50);
             this.btnExamInput.TabIndex = 11;
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 414);
+            this.ClientSize = new System.Drawing.Size(1414, 414);
             this.Controls.Add(this.btnExamInput);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);

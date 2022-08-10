@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personel_Student_Process_Add));
-            this.lblHours = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblPersonelSurname = new System.Windows.Forms.Label();
-            this.lblPersonelName = new System.Windows.Forms.Label();
-            this.lblPersonelNo = new System.Windows.Forms.Label();
             this.LblStudentNo = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtStudentNo = new System.Windows.Forms.TextBox();
@@ -56,58 +51,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblPasswprd = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblHours = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblPersonelSurname = new System.Windows.Forms.Label();
+            this.lblPersonelName = new System.Windows.Forms.Label();
+            this.lblPersonelNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblHours
-            // 
-            this.lblHours.AutoSize = true;
-            this.lblHours.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHours.Location = new System.Drawing.Point(940, 42);
-            this.lblHours.Name = "lblHours";
-            this.lblHours.Size = new System.Drawing.Size(116, 27);
-            this.lblHours.TabIndex = 11;
-            this.lblHours.Text = "00:00:00";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDate.Location = new System.Drawing.Point(570, 42);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(337, 27);
-            this.lblDate.TabIndex = 10;
-            this.lblDate.Text = "1 Ağustos 2022 Cumaertesi";
-            // 
-            // lblPersonelSurname
-            // 
-            this.lblPersonelSurname.AutoSize = true;
-            this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelSurname.Location = new System.Drawing.Point(390, 42);
-            this.lblPersonelSurname.Name = "lblPersonelSurname";
-            this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
-            this.lblPersonelSurname.TabIndex = 9;
-            this.lblPersonelSurname.Text = "Soyad";
-            // 
-            // lblPersonelName
-            // 
-            this.lblPersonelName.AutoSize = true;
-            this.lblPersonelName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelName.Location = new System.Drawing.Point(252, 42);
-            this.lblPersonelName.Name = "lblPersonelName";
-            this.lblPersonelName.Size = new System.Drawing.Size(38, 27);
-            this.lblPersonelName.TabIndex = 8;
-            this.lblPersonelName.Text = "Ad";
-            // 
-            // lblPersonelNo
-            // 
-            this.lblPersonelNo.AutoSize = true;
-            this.lblPersonelNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelNo.Location = new System.Drawing.Point(44, 42);
-            this.lblPersonelNo.Name = "lblPersonelNo";
-            this.lblPersonelNo.Size = new System.Drawing.Size(116, 27);
-            this.lblPersonelNo.TabIndex = 7;
-            this.lblPersonelNo.Text = "20223000";
             // 
             // LblStudentNo
             // 
@@ -321,11 +271,66 @@
             this.txtPassword.Size = new System.Drawing.Size(229, 34);
             this.txtPassword.TabIndex = 33;
             // 
+            // lblHours
+            // 
+            this.lblHours.AutoSize = true;
+            this.lblHours.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHours.Location = new System.Drawing.Point(814, 32);
+            this.lblHours.Name = "lblHours";
+            this.lblHours.Size = new System.Drawing.Size(116, 27);
+            this.lblHours.TabIndex = 38;
+            this.lblHours.Text = "00:00:00";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDate.Location = new System.Drawing.Point(438, 32);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(337, 27);
+            this.lblDate.TabIndex = 37;
+            this.lblDate.Text = "1 Ağustos 2022 Cumaertesi";
+            // 
+            // lblPersonelSurname
+            // 
+            this.lblPersonelSurname.AutoSize = true;
+            this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPersonelSurname.Location = new System.Drawing.Point(335, 32);
+            this.lblPersonelSurname.Name = "lblPersonelSurname";
+            this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
+            this.lblPersonelSurname.TabIndex = 36;
+            this.lblPersonelSurname.Text = "Canay";
+            // 
+            // lblPersonelName
+            // 
+            this.lblPersonelName.AutoSize = true;
+            this.lblPersonelName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPersonelName.Location = new System.Drawing.Point(269, 32);
+            this.lblPersonelName.Name = "lblPersonelName";
+            this.lblPersonelName.Size = new System.Drawing.Size(64, 27);
+            this.lblPersonelName.TabIndex = 35;
+            this.lblPersonelName.Text = "Emir";
+            // 
+            // lblPersonelNo
+            // 
+            this.lblPersonelNo.AutoSize = true;
+            this.lblPersonelNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPersonelNo.Location = new System.Drawing.Point(135, 32);
+            this.lblPersonelNo.Name = "lblPersonelNo";
+            this.lblPersonelNo.Size = new System.Drawing.Size(116, 27);
+            this.lblPersonelNo.TabIndex = 34;
+            this.lblPersonelNo.Text = "20223000";
+            // 
             // Personel_Student_Process_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 900);
+            this.Controls.Add(this.lblHours);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblPersonelSurname);
+            this.Controls.Add(this.lblPersonelName);
+            this.Controls.Add(this.lblPersonelNo);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPasswprd);
             this.Controls.Add(this.label5);
@@ -348,11 +353,6 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtStudentNo);
             this.Controls.Add(this.LblStudentNo);
-            this.Controls.Add(this.lblHours);
-            this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblPersonelSurname);
-            this.Controls.Add(this.lblPersonelName);
-            this.Controls.Add(this.lblPersonelNo);
             this.Name = "Personel_Student_Process_Add";
             this.Text = "Öğrenci Ekleme Ekranı";
             this.Load += new System.EventHandler(this.Personel_Student_Process_Add_Load);
@@ -363,12 +363,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblHours;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblPersonelSurname;
-        private System.Windows.Forms.Label lblPersonelName;
-        private System.Windows.Forms.Label lblPersonelNo;
         private System.Windows.Forms.Label LblStudentNo;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtStudentNo;
@@ -391,5 +385,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPasswprd;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblHours;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblPersonelSurname;
+        private System.Windows.Forms.Label lblPersonelName;
+        private System.Windows.Forms.Label lblPersonelNo;
     }
 }

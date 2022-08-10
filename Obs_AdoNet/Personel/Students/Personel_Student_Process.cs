@@ -60,7 +60,23 @@ namespace Obs_AdoNet.Personel
             DataTable dataTable = new DataTable();
 
             adapter.Fill(dataTable);
+            dataTable.Columns["StudentNo"].ColumnName = "Öğrenci_No";
+            dataTable.Columns["StudentId"].ColumnName = "Öğrenci_Id";
 
+            dataTable.Columns["StudentName"].ColumnName = "Ad";
+            dataTable.Columns["StudentSurname"].ColumnName = "Soyad";
+            dataTable.Columns["StudentEmail"].ColumnName = "E-Posta";
+            dataTable.Columns["StudentAdress"].ColumnName = "Adres";
+            dataTable.Columns["StudentPassword"].ColumnName = "Şifre";
+            dataTable.Columns["StudentPhone"].ColumnName = "Telefon";
+            dataTable.Columns["CreatedDate"].ColumnName = "Oluşturma_Tarihi";
+            dataTable.Columns["ModifiedDate"].ColumnName = "Düzenleme_Tarihi";
+            dataTable.Columns["StatusDate"].ColumnName = "Durum_Tarihi";
+            dataTable.Columns["CreatedUserId"].ColumnName = "Oluşturan_Id";
+            dataTable.Columns["ModifiedUserId"].ColumnName = "Düzenleyen_Id";
+            dataTable.Columns["StatusUserId"].ColumnName = "Durum_Id";
+            dataTable.Columns["Status1"].ColumnName = "Durum";
+            dataTable.AcceptChanges();
             dtgStudentList.DataSource = dataTable;
 
             connection.Close();

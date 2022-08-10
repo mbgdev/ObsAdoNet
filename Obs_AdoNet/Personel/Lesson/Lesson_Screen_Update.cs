@@ -61,7 +61,16 @@ namespace Obs_AdoNet.Personel.Lesson
 
             labelCommand.ExecuteNonQuery();
 
+            SqlDataReader reader = labelCommand.ExecuteReader();
 
+            while (reader.Read())
+            {
+                lblPersonelNo.Text = reader["PersonnelNo"].ToString();
+                lblPersonelName.Text = reader["PersonnelName"].ToString();
+                lblPersonelSurname.Text = reader["PersonnelSurname"].ToString();
+            }
+
+            reader.Close();
 
             connection.Close();
 
@@ -79,7 +88,14 @@ namespace Obs_AdoNet.Personel.Lesson
             DataTable dataTable = new DataTable();
 
             adapter.Fill(dataTable);
+            dataTable.Columns["LessonDate"].ColumnName = "Ders_Günü";
+            dataTable.Columns["Lesson_Id"].ColumnName = "Ders_Id";
 
+            dataTable.Columns["LessonTime"].ColumnName = "Ders_Saati";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["Status1"].ColumnName = "Durum";
+        
+            dataTable.AcceptChanges();
             dtgLessonList.DataSource = dataTable;
 
             connection.Close();

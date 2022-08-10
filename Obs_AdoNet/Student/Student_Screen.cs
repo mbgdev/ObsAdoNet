@@ -59,8 +59,15 @@ namespace Obs_AdoNet.Ogrenci
             dtgLessonAdapter.SelectCommand.Parameters.AddWithValue("@OgrNo", Form1.OgrNo);
 
             DataTable dataTable = new DataTable();
+           
 
             dtgLessonAdapter.Fill(dataTable);
+            dataTable.Columns["LessonDate"].ColumnName = "Ders_Günü";
+            dataTable.Columns["LessonTime"].ColumnName = "Ders_Saati";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["TeacherName"].ColumnName = "Öğretmen_Adı";
+            dataTable.Columns["TeacherSurname"].ColumnName = "Öğretmen_Soyadı";
+            dataTable.AcceptChanges();
 
             dtgStudentLessonProgram.DataSource = dataTable;
 
@@ -81,6 +88,14 @@ namespace Obs_AdoNet.Ogrenci
 
             dtgExamAdapter.Fill(dataTable);
 
+            dataTable.Columns["StudentName"].ColumnName = "Öğrenci_Adı";
+            dataTable.Columns["StudentSurname"].ColumnName = "Öğrenci_Soyadı";
+            dataTable.Columns["LessonName"].ColumnName = "Ders_Adı";
+            dataTable.Columns["Midterm"].ColumnName = "Ara_Sınav";
+            dataTable.Columns["Final"].ColumnName = "Final";
+            dataTable.Columns["ExamAvg"].ColumnName = "Ortalama";
+            dataTable.Columns["ExamStatus"].ColumnName = "Ders Durum";
+            dataTable.AcceptChanges();
             dtgExamResult.DataSource = dataTable;
 
             connection.Close();

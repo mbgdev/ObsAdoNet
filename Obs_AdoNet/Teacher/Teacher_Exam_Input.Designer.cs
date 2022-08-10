@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTeacherNo = new System.Windows.Forms.Label();
-            this.lblTeacherName = new System.Windows.Forms.Label();
-            this.lblTeacherSurname = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblHours = new System.Windows.Forms.Label();
             this.lblStudentList = new System.Windows.Forms.Label();
             this.dtgStudentList = new System.Windows.Forms.DataGridView();
             this.txtStudentNo = new System.Windows.Forms.TextBox();
@@ -46,58 +41,13 @@
             this.btnExamUpdateFinal = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.cbLesson = new System.Windows.Forms.ComboBox();
+            this.lblHours = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTeacherSurname = new System.Windows.Forms.Label();
+            this.lblTeacherName = new System.Windows.Forms.Label();
+            this.lblTeacherNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTeacherNo
-            // 
-            this.lblTeacherNo.AutoSize = true;
-            this.lblTeacherNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTeacherNo.Location = new System.Drawing.Point(45, 45);
-            this.lblTeacherNo.Name = "lblTeacherNo";
-            this.lblTeacherNo.Size = new System.Drawing.Size(155, 27);
-            this.lblTeacherNo.TabIndex = 1;
-            this.lblTeacherNo.Text = "Teacher No:";
-            // 
-            // lblTeacherName
-            // 
-            this.lblTeacherName.AutoSize = true;
-            this.lblTeacherName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTeacherName.Location = new System.Drawing.Point(343, 45);
-            this.lblTeacherName.Name = "lblTeacherName";
-            this.lblTeacherName.Size = new System.Drawing.Size(77, 27);
-            this.lblTeacherName.TabIndex = 2;
-            this.lblTeacherName.Text = "Name:";
-            // 
-            // lblTeacherSurname
-            // 
-            this.lblTeacherSurname.AutoSize = true;
-            this.lblTeacherSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTeacherSurname.Location = new System.Drawing.Point(473, 45);
-            this.lblTeacherSurname.Name = "lblTeacherSurname";
-            this.lblTeacherSurname.Size = new System.Drawing.Size(116, 27);
-            this.lblTeacherSurname.TabIndex = 3;
-            this.lblTeacherSurname.Text = "Surname:";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDate.Location = new System.Drawing.Point(695, 45);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(285, 27);
-            this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "1 Ağustos 2022 Cuma :";
-            // 
-            // lblHours
-            // 
-            this.lblHours.AutoSize = true;
-            this.lblHours.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHours.Location = new System.Drawing.Point(1023, 45);
-            this.lblHours.Name = "lblHours";
-            this.lblHours.Size = new System.Drawing.Size(77, 27);
-            this.lblHours.TabIndex = 5;
-            this.lblHours.Text = "Saat:";
             // 
             // lblStudentList
             // 
@@ -141,7 +91,7 @@
             // txtMidterm
             // 
             this.txtMidterm.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMidterm.Location = new System.Drawing.Point(204, 604);
+            this.txtMidterm.Location = new System.Drawing.Point(328, 605);
             this.txtMidterm.Name = "txtMidterm";
             this.txtMidterm.Size = new System.Drawing.Size(134, 34);
             this.txtMidterm.TabIndex = 12;
@@ -160,7 +110,7 @@
             // txtFinal
             // 
             this.txtFinal.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtFinal.Location = new System.Drawing.Point(624, 604);
+            this.txtFinal.Location = new System.Drawing.Point(748, 605);
             this.txtFinal.Name = "txtFinal";
             this.txtFinal.Size = new System.Drawing.Size(134, 34);
             this.txtFinal.TabIndex = 14;
@@ -169,7 +119,7 @@
             // 
             this.lblMidterm.AutoSize = true;
             this.lblMidterm.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMidterm.Location = new System.Drawing.Point(199, 551);
+            this.lblMidterm.Location = new System.Drawing.Point(323, 552);
             this.lblMidterm.Name = "lblMidterm";
             this.lblMidterm.Size = new System.Drawing.Size(129, 27);
             this.lblMidterm.TabIndex = 15;
@@ -179,7 +129,7 @@
             // 
             this.lblFinal.AutoSize = true;
             this.lblFinal.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFinal.Location = new System.Drawing.Point(619, 551);
+            this.lblFinal.Location = new System.Drawing.Point(743, 552);
             this.lblFinal.Name = "lblFinal";
             this.lblFinal.Size = new System.Drawing.Size(155, 27);
             this.lblFinal.TabIndex = 16;
@@ -188,7 +138,7 @@
             // btnExamUpdateMidterm
             // 
             this.btnExamUpdateMidterm.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExamUpdateMidterm.Location = new System.Drawing.Point(389, 557);
+            this.btnExamUpdateMidterm.Location = new System.Drawing.Point(513, 558);
             this.btnExamUpdateMidterm.Name = "btnExamUpdateMidterm";
             this.btnExamUpdateMidterm.Size = new System.Drawing.Size(200, 81);
             this.btnExamUpdateMidterm.TabIndex = 17;
@@ -199,7 +149,7 @@
             // btnExamUpdateFinal
             // 
             this.btnExamUpdateFinal.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExamUpdateFinal.Location = new System.Drawing.Point(818, 557);
+            this.btnExamUpdateFinal.Location = new System.Drawing.Point(942, 558);
             this.btnExamUpdateFinal.Name = "btnExamUpdateFinal";
             this.btnExamUpdateFinal.Size = new System.Drawing.Size(200, 81);
             this.btnExamUpdateFinal.TabIndex = 18;
@@ -224,14 +174,69 @@
             this.cbLesson.FormattingEnabled = true;
             this.cbLesson.Location = new System.Drawing.Point(23, 604);
             this.cbLesson.Name = "cbLesson";
-            this.cbLesson.Size = new System.Drawing.Size(148, 35);
+            this.cbLesson.Size = new System.Drawing.Size(279, 35);
             this.cbLesson.TabIndex = 20;
+            // 
+            // lblHours
+            // 
+            this.lblHours.AutoSize = true;
+            this.lblHours.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHours.Location = new System.Drawing.Point(846, 56);
+            this.lblHours.Name = "lblHours";
+            this.lblHours.Size = new System.Drawing.Size(116, 27);
+            this.lblHours.TabIndex = 25;
+            this.lblHours.Text = "00:00:00";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDate.Location = new System.Drawing.Point(452, 56);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(337, 27);
+            this.lblDate.TabIndex = 24;
+            this.lblDate.Text = "10 Ağustos 2022 Çarşamaba";
+            // 
+            // lblTeacherSurname
+            // 
+            this.lblTeacherSurname.AutoSize = true;
+            this.lblTeacherSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeacherSurname.Location = new System.Drawing.Point(321, 56);
+            this.lblTeacherSurname.Name = "lblTeacherSurname";
+            this.lblTeacherSurname.Size = new System.Drawing.Size(77, 27);
+            this.lblTeacherSurname.TabIndex = 23;
+            this.lblTeacherSurname.Text = "Aydın";
+            // 
+            // lblTeacherName
+            // 
+            this.lblTeacherName.AutoSize = true;
+            this.lblTeacherName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeacherName.Location = new System.Drawing.Point(225, 56);
+            this.lblTeacherName.Name = "lblTeacherName";
+            this.lblTeacherName.Size = new System.Drawing.Size(77, 27);
+            this.lblTeacherName.TabIndex = 22;
+            this.lblTeacherName.Text = "Murat";
+            // 
+            // lblTeacherNo
+            // 
+            this.lblTeacherNo.AutoSize = true;
+            this.lblTeacherNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeacherNo.Location = new System.Drawing.Point(45, 56);
+            this.lblTeacherNo.Name = "lblTeacherNo";
+            this.lblTeacherNo.Size = new System.Drawing.Size(116, 27);
+            this.lblTeacherNo.TabIndex = 21;
+            this.lblTeacherNo.Text = "20222000";
             // 
             // Teacher_Exam_Input
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 666);
+            this.Controls.Add(this.lblHours);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblTeacherSurname);
+            this.Controls.Add(this.lblTeacherName);
+            this.Controls.Add(this.lblTeacherNo);
             this.Controls.Add(this.cbLesson);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExamUpdateFinal);
@@ -245,11 +250,6 @@
             this.Controls.Add(this.txtStudentNo);
             this.Controls.Add(this.dtgStudentList);
             this.Controls.Add(this.lblStudentList);
-            this.Controls.Add(this.lblHours);
-            this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblTeacherSurname);
-            this.Controls.Add(this.lblTeacherName);
-            this.Controls.Add(this.lblTeacherNo);
             this.Name = "Teacher_Exam_Input";
             this.Text = "Öğretmen Sınav Giriş Ekranı";
             this.Load += new System.EventHandler(this.Teacher_Exam_Input_Load);
@@ -260,13 +260,6 @@
         }
 
         #endregion
-
-
-        private System.Windows.Forms.Label lblTeacherNo;
-        private System.Windows.Forms.Label lblTeacherName;
-        private System.Windows.Forms.Label lblTeacherSurname;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblHours;
         private System.Windows.Forms.Label lblStudentList;
         private System.Windows.Forms.DataGridView dtgStudentList;
         private System.Windows.Forms.TextBox txtStudentNo;
@@ -280,5 +273,10 @@
         private System.Windows.Forms.Button btnExamUpdateFinal;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox cbLesson;
+        private System.Windows.Forms.Label lblHours;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTeacherSurname;
+        private System.Windows.Forms.Label lblTeacherName;
+        private System.Windows.Forms.Label lblTeacherNo;
     }
 }
