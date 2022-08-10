@@ -38,6 +38,8 @@ Sistem .NetFramework 4.8 sürümü ile yapılmıştır.
 
 ![personel3](https://user-images.githubusercontent.com/57618903/183959362-d3f346dc-459e-49ea-ac61-c75ed092f351.png)
 
+![personel4](https://user-images.githubusercontent.com/57618903/183959369-1d1b94ef-6bec-4d03-9172-acd9345f69b0.png)
+
 ![ders1](https://user-images.githubusercontent.com/57618903/183963058-9e34b066-456b-4152-8a67-0d54d72a0bab.png)
 
 ![ders2](https://user-images.githubusercontent.com/57618903/183963066-06a784f7-e826-48a9-a9cd-69aae2facf7b.png)
