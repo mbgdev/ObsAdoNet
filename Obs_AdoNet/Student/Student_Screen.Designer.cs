@@ -91,10 +91,10 @@
             this.dtgStudentLessonProgram.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgStudentLessonProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgStudentLessonProgram.Location = new System.Drawing.Point(41, 167);
-            this.dtgStudentLessonProgram.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgStudentLessonProgram.Margin = new System.Windows.Forms.Padding(4);
             this.dtgStudentLessonProgram.Name = "dtgStudentLessonProgram";
             this.dtgStudentLessonProgram.RowHeadersWidth = 51;
-            this.dtgStudentLessonProgram.Size = new System.Drawing.Size(1243, 167);
+            this.dtgStudentLessonProgram.Size = new System.Drawing.Size(1345, 167);
             this.dtgStudentLessonProgram.TabIndex = 4;
             // 
             // lblStudentLessonProgram
@@ -124,17 +124,17 @@
             this.dtgExamResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgExamResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgExamResult.Location = new System.Drawing.Point(41, 426);
-            this.dtgExamResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgExamResult.Margin = new System.Windows.Forms.Padding(4);
             this.dtgExamResult.Name = "dtgExamResult";
             this.dtgExamResult.RowHeadersWidth = 51;
-            this.dtgExamResult.Size = new System.Drawing.Size(1243, 167);
+            this.dtgExamResult.Size = new System.Drawing.Size(1329, 167);
             this.dtgExamResult.TabIndex = 7;
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.Location = new System.Drawing.Point(1391, 38);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(1270, 38);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(116, 48);
             this.btnBack.TabIndex = 8;
@@ -152,11 +152,11 @@
             this.lblHours.TabIndex = 9;
             this.lblHours.Text = "label1";
             // 
-            // Ogrenci_Ekrani
+            // Student_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1545, 676);
+            this.ClientSize = new System.Drawing.Size(1414, 640);
             this.Controls.Add(this.lblHours);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dtgExamResult);
@@ -167,9 +167,9 @@
             this.Controls.Add(this.lblStudentSurname);
             this.Controls.Add(this.lblStudentName);
             this.Controls.Add(this.lblStudentNo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Ogrenci_Ekrani";
-            this.Text = "Obs Öğrenci Ekranı";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Student_Screen";
+            this.Text = "Öğrenci Ekranı";
             this.Load += new System.EventHandler(this.Ogrenci_Ekrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentLessonProgram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgExamResult)).EndInit();

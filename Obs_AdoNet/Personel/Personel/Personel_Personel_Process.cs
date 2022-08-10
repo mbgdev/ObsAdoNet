@@ -19,7 +19,6 @@ namespace Obs_AdoNet.Personel.Personel
         }
 
 
-
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
 
         private void LabelValues()
@@ -29,7 +28,8 @@ namespace Obs_AdoNet.Personel.Personel
             lblHours.Text = DateTime.Now.ToLongTimeString();
             connection.Open();
 
-            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=20223001", connection);
+            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=@PersonnelNo", connection);
+            labelCommand.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
 
             labelCommand.ExecuteNonQuery();
 

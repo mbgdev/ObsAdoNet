@@ -43,7 +43,7 @@ namespace Obs_AdoNet
 
             connection.Open();
 
-            if (a / 1000 == 20221)
+            if (a / 1000 == 20221 || a / 10000 == 20221)
             {
                 SqlCommand sqlCommand = new SqlCommand("select * from Students where StudentNo=@StudentNo and StudentPassword=@StudentPassword", connection);
                 sqlCommand.Parameters.AddWithValue("@StudentNo", txtNo.Text);
@@ -66,7 +66,7 @@ namespace Obs_AdoNet
 
 
             }
-            else if (a / 1000 == 20222)
+            else if (a / 1000 == 20222  || a / 10000 == 20222)
             {
 
                 SqlCommand sqlCommand = new SqlCommand("select * from Teachers where TeacherNo=@TeacherNo and TeacherPassword=@TeacherPassword", connection);
@@ -88,7 +88,7 @@ namespace Obs_AdoNet
                     MessageBox.Show("Kullanıcı numarası veya şifre yanlış.");
                 }
             }
-            else if (a / 1000 == 20223)
+            else if (a / 1000 == 20223 || a / 10000 == 20223)
             {
                 SqlCommand sqlCommand = new SqlCommand("select * from Personnels where PersonnelNo=@PersonnelNo and PersonnelPassword=@PersonnelPassword", connection);
                 sqlCommand.Parameters.AddWithValue("@PersonnelNo", txtNo.Text);
@@ -126,6 +126,11 @@ namespace Obs_AdoNet
             else
             txtPassword.UseSystemPasswordChar = true;
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
         }
     }
 }

@@ -83,7 +83,7 @@
             this.btnSearchPersonelNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSearchPersonelNo.Location = new System.Drawing.Point(1037, 338);
             this.btnSearchPersonelNo.Name = "btnSearchPersonelNo";
-            this.btnSearchPersonelNo.Size = new System.Drawing.Size(200, 42);
+            this.btnSearchPersonelNo.Size = new System.Drawing.Size(208, 42);
             this.btnSearchPersonelNo.TabIndex = 22;
             this.btnSearchPersonelNo.Text = "Ara";
             this.btnSearchPersonelNo.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.Location = new System.Drawing.Point(1102, 38);
+            this.btnBack.Location = new System.Drawing.Point(1110, 38);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(135, 53);
             this.btnBack.TabIndex = 32;

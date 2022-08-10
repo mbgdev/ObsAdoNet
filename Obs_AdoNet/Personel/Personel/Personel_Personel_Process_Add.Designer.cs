@@ -54,6 +54,8 @@
             this.lblPersonelSurname = new System.Windows.Forms.Label();
             this.lblPersonelName = new System.Windows.Forms.Label();
             this.lblPersonelNo = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPasswprd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonellList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.Location = new System.Drawing.Point(934, 112);
+            this.btnBack.Location = new System.Drawing.Point(934, 121);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(135, 53);
             this.btnBack.TabIndex = 55;
@@ -81,7 +83,7 @@
             // 
             this.DtgPersonelList.AutoSize = true;
             this.DtgPersonelList.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DtgPersonelList.Location = new System.Drawing.Point(33, 428);
+            this.DtgPersonelList.Location = new System.Drawing.Point(33, 517);
             this.DtgPersonelList.Name = "DtgPersonelList";
             this.DtgPersonelList.Size = new System.Drawing.Size(220, 27);
             this.DtgPersonelList.TabIndex = 54;
@@ -90,7 +92,7 @@
             // dtgPersonellList
             // 
             this.dtgPersonellList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPersonellList.Location = new System.Drawing.Point(32, 475);
+            this.dtgPersonellList.Location = new System.Drawing.Point(32, 564);
             this.dtgPersonellList.Name = "dtgPersonellList";
             this.dtgPersonellList.RowHeadersWidth = 51;
             this.dtgPersonellList.RowTemplate.Height = 24;
@@ -134,7 +136,7 @@
             // rtxtAdress
             // 
             this.rtxtAdress.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rtxtAdress.Location = new System.Drawing.Point(598, 246);
+            this.rtxtAdress.Location = new System.Drawing.Point(598, 255);
             this.rtxtAdress.Name = "rtxtAdress";
             this.rtxtAdress.Size = new System.Drawing.Size(358, 165);
             this.rtxtAdress.TabIndex = 49;
@@ -144,7 +146,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(593, 189);
+            this.label4.Location = new System.Drawing.Point(593, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 27);
             this.label4.TabIndex = 48;
@@ -198,9 +200,9 @@
             this.lblEmail.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblEmail.Location = new System.Drawing.Point(30, 198);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(103, 27);
+            this.lblEmail.Size = new System.Drawing.Size(116, 27);
             this.lblEmail.TabIndex = 42;
-            this.lblEmail.Text = "E-Posta";
+            this.lblEmail.Text = "E-Posta:";
             // 
             // label1
             // 
@@ -225,9 +227,9 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSave.Location = new System.Drawing.Point(36, 329);
+            this.btnSave.Location = new System.Drawing.Point(35, 428);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(231, 66);
+            this.btnSave.Size = new System.Drawing.Size(229, 66);
             this.btnSave.TabIndex = 39;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -301,11 +303,31 @@
             this.lblPersonelNo.TabIndex = 32;
             this.lblPersonelNo.Text = "20223000";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Location = new System.Drawing.Point(35, 362);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(229, 34);
+            this.txtPassword.TabIndex = 58;
+            // 
+            // lblPasswprd
+            // 
+            this.lblPasswprd.AutoSize = true;
+            this.lblPasswprd.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPasswprd.Location = new System.Drawing.Point(39, 315);
+            this.lblPasswprd.Name = "lblPasswprd";
+            this.lblPasswprd.Size = new System.Drawing.Size(90, 27);
+            this.lblPasswprd.TabIndex = 57;
+            this.lblPasswprd.Text = "Şifre:";
+            // 
             // Personel_Personel_Process_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 739);
+            this.ClientSize = new System.Drawing.Size(1097, 832);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPasswprd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.DtgPersonelList);
@@ -367,5 +389,7 @@
         private System.Windows.Forms.Label lblPersonelSurname;
         private System.Windows.Forms.Label lblPersonelName;
         private System.Windows.Forms.Label lblPersonelNo;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPasswprd;
     }
 }

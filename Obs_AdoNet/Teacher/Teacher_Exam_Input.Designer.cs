@@ -117,13 +117,13 @@
             this.dtgStudentList.Name = "dtgStudentList";
             this.dtgStudentList.RowHeadersWidth = 51;
             this.dtgStudentList.RowTemplate.Height = 24;
-            this.dtgStudentList.Size = new System.Drawing.Size(858, 251);
+            this.dtgStudentList.Size = new System.Drawing.Size(963, 251);
             this.dtgStudentList.TabIndex = 9;
             // 
             // txtStudentNo
             // 
             this.txtStudentNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStudentNo.Location = new System.Drawing.Point(989, 326);
+            this.txtStudentNo.Location = new System.Drawing.Point(1054, 317);
             this.txtStudentNo.Name = "txtStudentNo";
             this.txtStudentNo.Size = new System.Drawing.Size(236, 34);
             this.txtStudentNo.TabIndex = 10;
@@ -132,7 +132,7 @@
             // 
             this.lblStudentNo.AutoSize = true;
             this.lblStudentNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStudentNo.Location = new System.Drawing.Point(989, 255);
+            this.lblStudentNo.Location = new System.Drawing.Point(1054, 246);
             this.lblStudentNo.Name = "lblStudentNo";
             this.lblStudentNo.Size = new System.Drawing.Size(155, 27);
             this.lblStudentNo.TabIndex = 11;
@@ -149,7 +149,7 @@
             // btnStudentGet
             // 
             this.btnStudentGet.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnStudentGet.Location = new System.Drawing.Point(989, 402);
+            this.btnStudentGet.Location = new System.Drawing.Point(1054, 393);
             this.btnStudentGet.Name = "btnStudentGet";
             this.btnStudentGet.Size = new System.Drawing.Size(236, 46);
             this.btnStudentGet.TabIndex = 13;
@@ -210,7 +210,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.Location = new System.Drawing.Point(1220, 45);
+            this.btnBack.Location = new System.Drawing.Point(1143, 33);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(147, 50);
             this.btnBack.TabIndex = 19;
@@ -231,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 704);
+            this.ClientSize = new System.Drawing.Size(1312, 666);
             this.Controls.Add(this.cbLesson);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExamUpdateFinal);
@@ -251,7 +251,7 @@
             this.Controls.Add(this.lblTeacherName);
             this.Controls.Add(this.lblTeacherNo);
             this.Name = "Teacher_Exam_Input";
-            this.Text = "Teacher Exam Input";
+            this.Text = "Öğretmen Sınav Giriş Ekranı";
             this.Load += new System.EventHandler(this.Teacher_Exam_Input_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).EndInit();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using Obs_AdoNet.Personel.Personel;
+﻿using Obs_AdoNet.Personel.Lesson;
+using Obs_AdoNet.Personel.Personel;
 using Obs_AdoNet.Personel.Teachers;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,6 @@ namespace Obs_AdoNet.Personel
         {
             InitializeComponent();
         }
-
         private void btnStudentProcess_Click(object sender, EventArgs e)
         {
             Personel_Process personel_Student_Process = new Personel_Process();
@@ -44,6 +44,13 @@ namespace Obs_AdoNet.Personel
         {
             Personel_Personel_Process personel_Personel_Process = new Personel_Personel_Process();
             personel_Personel_Process.Show();
+            this.Hide();
+        }
+
+        private void btnLessonAdd_Click(object sender, EventArgs e)
+        {
+            Lesson_Screen lesson_Screen = new Lesson_Screen();
+            lesson_Screen.Show();
             this.Hide();
         }
     }

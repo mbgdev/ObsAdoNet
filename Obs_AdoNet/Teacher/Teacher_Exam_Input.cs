@@ -17,9 +17,8 @@ namespace Obs_AdoNet.Teacher
         {
             InitializeComponent();
         }
-        private string midtrem;
 
-       
+        private string midtrem;
 
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
 
@@ -55,7 +54,14 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where TeacherNo = @teacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo, StudentName, StudentSurname from Students " +
+               "inner join TransitionLesson " +
+               "on TransitionLesson.StudentId = Students.StudentId " +
+               "inner join Teachers " +
+               "on Teachers.TeacherId = TransitionLesson.TeacherId " +
+               "inner join Lessons " +
+               "on Lessons.Lesson_Id = TransitionLesson.LessonId " +
+               "where TeacherNo = @teacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -78,21 +84,10 @@ namespace Obs_AdoNet.Teacher
 
         }
 
-        private int? ExamAvg(int a)
-        {
-            return null;
-
-        }
-        private int? ExamAvg()
-        {
-            return null;
-
-        }
-
         private void ComboBoxLesson()
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("select distinct LessonId,LessonName, LessonDate, LessonTime, TeacherName, TeacherSurname  from Teachers inner join TransitionLesson on TransitionLesson.TeacherId = Teachers.Id  inner join  Lessons on Lessons.Lesson_Id = TransitionLesson.LessonId where TeacherNo = @teacherNo", connection);
+            SqlCommand command = new SqlCommand("select distinct LessonId,LessonName, LessonDate, LessonTime, TeacherName, TeacherSurname  from Teachers inner join TransitionLesson on TransitionLesson.TeacherId = Teachers.TeacherId  inner join  Lessons on Lessons.Lesson_Id = TransitionLesson.LessonId where TeacherNo = @teacherNo", connection);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             dataAdapter.SelectCommand.Parameters.AddWithValue("@TeacherNo", Form1.TeacherNo);
             DataTable dataTable = new DataTable();
@@ -128,7 +123,13 @@ namespace Obs_AdoNet.Teacher
 
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.LEsson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results " +
+                "on Students.StudentId = Exam_Results.StudentIdd " +
+                "inner join Lessons " +
+                "on Lessons.Lesson_Id = Exam_Results.LessonId " +
+                "inner join Teachers " +
+                "on Teachers.TeacherId = Exam_Results.TeacherId" +
+                " where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -150,7 +151,13 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand ExamCommand = new SqlCommand("update  Exam_Results set Midterm = @Midterm where LessonId=@LessonId and  StudentId = (select   distinct StudentId from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId  inner join Teachers on Teachers.Id = Exam_Results.TeacherId where StudentNo = @StudentNo and TeacherNo = @TeacherNo)", connection);
+            SqlCommand ExamCommand = new SqlCommand("update  Exam_Results set Midterm = @Midterm where LessonId=@LessonId and  StudentIdd = (select   distinct StudentId from Students inner join Exam_Results " +
+                "on Students.StudentId = Exam_Results.StudentIdd " +
+                "inner join Lessons " +
+                "on Lessons.Lesson_Id = Exam_Results.LessonId  " +
+                "inner join Teachers " +
+                "on Teachers.TeacherId = Exam_Results.TeacherId " +
+                "where StudentNo = @StudentNo and TeacherNo = @TeacherNo)", connection);
 
 
 
@@ -158,13 +165,19 @@ namespace Obs_AdoNet.Teacher
             ExamCommand.Parameters.AddWithValue("@Midterm", txtMidterm.Text);
             ExamCommand.Parameters.AddWithValue("@StudentNo", txtStudentNo.Text);
             ExamCommand.Parameters.AddWithValue("@TeacherNo", Form1.TeacherNo);
-      
+
 
             ExamCommand.ExecuteNonQuery();
 
 
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results " +
+                "on Students.StudentId = Exam_Results.StudentIdd " +
+                "inner join Lessons " +
+                "on Lessons.Lesson_Id = Exam_Results.LessonId " +
+                "inner join Teachers " +
+                "on Teachers.TeacherId = Exam_Results.TeacherId " +
+                "where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -184,25 +197,41 @@ namespace Obs_AdoNet.Teacher
 
         private void btnExamUpdateFinal_Click(object sender, EventArgs e)
         {
-            
+
 
             connection.Open();
 
-            SqlCommand midtermCommand = new SqlCommand("select Midterm from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
+            SqlCommand midtermCommand = new SqlCommand("select Midterm from Students " +
+                "inner join Exam_Results " +
+                "on Students.StudentId = Exam_Results.StudentIdd " +
+                "inner join Lessons " +
+                "on Lessons.Lesson_Id = Exam_Results.LessonId " +
+                "inner join Teachers " +
+                "on Teachers.TeacherId = Exam_Results.TeacherId " +
+                "where StudentNo = @StudentNo and TeacherNo=@TeacherNo and Lesson_Id=@Lesson_Id", connection);
 
             midtermCommand.Parameters.AddWithValue("@StudentNo", txtStudentNo.Text);
             midtermCommand.Parameters.AddWithValue("@TeacherNo", Form1.TeacherNo);
+            midtermCommand.Parameters.AddWithValue("@Lesson_Id", cbLesson.SelectedValue);
+
 
             SqlDataReader reader = midtermCommand.ExecuteReader();
             while (reader.Read())
             {
-               midtrem = reader[0].ToString();
-                
+                midtrem = reader["Midterm"].ToString();
+
 
             }
             reader.Close();
 
-            SqlCommand ExamCommand = new SqlCommand("update  Exam_Results set Final = @Final ,ExamAvg=@ExamAvg where LessonId=@LessonId and StudentId = (select  distinct StudentId from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId  inner join Teachers on Teachers.Id = Exam_Results.TeacherId where StudentNo = @StudentNo and TeacherNo = @TeacherNo)", connection);
+            SqlCommand ExamCommand = new SqlCommand("update  Exam_Results set Final = @Final ,ExamAvg=@ExamAvg where LessonId=@LessonId and StudentIdd = (select  distinct StudentId from Students " +
+                "inner join Exam_Results " +
+                "on Students.StudentId = Exam_Results.StudentIdd " +
+                "inner join Lessons " +
+                "on Lessons.Lesson_Id = Exam_Results.LessonId " +
+                " inner join Teachers " +
+                "on Teachers.TeacherId = Exam_Results.TeacherId " +
+                "where StudentNo = @StudentNo and TeacherNo = @TeacherNo)", connection);
 
 
 
@@ -216,7 +245,13 @@ namespace Obs_AdoNet.Teacher
 
 
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results " +
+                "on Students.StudentId = Exam_Results.StudentIdd" +
+                " inner join Lessons " +
+                "on Lessons.Lesson_Id = Exam_Results.LessonId " +
+                "inner join Teachers " +
+                "on Teachers.TeacherId = Exam_Results.TeacherId " +
+                "where StudentNo = @StudentNo and TeacherNo=@TeacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -233,7 +268,7 @@ namespace Obs_AdoNet.Teacher
 
             connection.Close();
         }
-      
+
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {

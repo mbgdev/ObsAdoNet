@@ -18,9 +18,32 @@ namespace Obs_AdoNet.Personel.Teachers
             InitializeComponent();
         }
 
-
-
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
+        private string PersonelID;
+        private int PersonnelIdGet()
+        {
+
+
+            SqlCommand perId = new SqlCommand("select Id from Personnels where PersonnelNo=@PersonnelNo", connection);
+            perId.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
+            connection.Open();
+            SqlDataReader reader = perId.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                PersonelID = reader["Id"].ToString();
+
+            }
+
+            reader.Close();
+            connection.Close();
+
+
+            return Convert.ToInt32(PersonelID);
+
+
+        }
         private void LabelValues()
         {
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -28,7 +51,8 @@ namespace Obs_AdoNet.Personel.Teachers
             lblHours.Text = DateTime.Now.ToLongTimeString();
             connection.Open();
 
-            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=20223001", connection);
+            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=@PersonnelNo", connection);
+            labelCommand.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
 
             labelCommand.ExecuteNonQuery();
 
@@ -52,7 +76,7 @@ namespace Obs_AdoNet.Personel.Teachers
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("select * from Teachers order by Id desc", connection);
+            SqlCommand command = new SqlCommand("select * from Teachers order by TeacherId desc", connection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -64,9 +88,6 @@ namespace Obs_AdoNet.Personel.Teachers
 
             connection.Close();
         }
-
-
-
 
         private void Personel_Teacher_Process_Update_Load(object sender, EventArgs e)
         {
@@ -96,9 +117,9 @@ namespace Obs_AdoNet.Personel.Teachers
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            connection.Open();
 
             SqlCommand command = new SqlCommand("update Teachers set  " +
+                "TeacherPassword=@TeacherPassword," +
                 "TeacherName=@TeacherName, " +
                 "TeacherSurname=@TeacherSurname," +
                 "TeacherEmail=@TeacherEmail," +
@@ -114,6 +135,7 @@ namespace Obs_AdoNet.Personel.Teachers
                 "  where TeacherNo=@TeacherNo", connection);
 
             command.Parameters.AddWithValue("@TeacherNo", txtTeacherNo.Text);
+            command.Parameters.AddWithValue("@TeacherPassword", txtPassword.Text);
             command.Parameters.AddWithValue("@TeacherName", txtTeacherName.Text);
             command.Parameters.AddWithValue("@TeacherSurname", txtTeacherSurname.Text);
             command.Parameters.AddWithValue("@TeacherEmail", txtTeacherEmail.Text);
@@ -122,9 +144,9 @@ namespace Obs_AdoNet.Personel.Teachers
             command.Parameters.AddWithValue("@CreatedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@ModifiedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@StatusDate", DateTime.Now.ToShortDateString());
-            command.Parameters.AddWithValue("@CreatedUserId", 1);
-            command.Parameters.AddWithValue("@ModifiedUserId", 1);
-            command.Parameters.AddWithValue("@StatusUserId", 1);
+            command.Parameters.AddWithValue("@CreatedUserId", PersonnelIdGet());
+            command.Parameters.AddWithValue("@ModifiedUserId", PersonnelIdGet());
+            command.Parameters.AddWithValue("@StatusUserId", PersonnelIdGet());
 
 
             if (rbActive.Checked == true)
@@ -140,8 +162,10 @@ namespace Obs_AdoNet.Personel.Teachers
                 command.Parameters.AddWithValue("@Status1", "False");
 
             }
+            connection.Open();
+
             command.ExecuteNonQuery();
-            MessageBox.Show("Ürün başarılı bir şekilde sisteme güncellendi.");
+            MessageBox.Show("Öğretmen başarılı bir şekilde sisteme güncellendi.");
             connection.Close();
             DtgTeacherList();
         }

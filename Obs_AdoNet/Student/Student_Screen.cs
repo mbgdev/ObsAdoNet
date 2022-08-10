@@ -52,7 +52,7 @@ namespace Obs_AdoNet.Ogrenci
 
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonDate,LessonTime,LessonName,TeacherName,TeacherSurname from Students inner join TransitionLesson on TransitionLesson.StudentId = Students.Id inner join Lessons on TransitionLesson.LessonId = Lessons.Lesson_Id inner join Teachers on Teachers.Id = TransitionLesson.TeacherId where StudentNo = @ogrNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonDate,LessonTime,LessonName,TeacherName,TeacherSurname from Students inner join TransitionLesson on TransitionLesson.StudentId = Students.StudentId inner join Lessons on TransitionLesson.LessonId = Lessons.Lesson_Id inner join Teachers on Teachers.TeacherId = TransitionLesson.TeacherId where StudentNo = @ogrNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -71,7 +71,7 @@ namespace Obs_AdoNet.Ogrenci
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select StudentName,StudentSurname,LessonName,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.Id =  Exam_Results.StudentId inner join Lessons  on Lessons.Lesson_Id =  Exam_Results.LessonId where StudentNo = @ogrno", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select StudentName,StudentSurname,LessonName,Midterm,Final,ExamAvg,ExamStatus from Students inner join Exam_Results on Students.StudentId =  Exam_Results.StudentIdd inner join Lessons  on Lessons.Lesson_Id =  Exam_Results.LessonId where StudentNo = @ogrno", connection);
 
             SqlDataAdapter dtgExamAdapter = new SqlDataAdapter(dtgLessonCommand);
 

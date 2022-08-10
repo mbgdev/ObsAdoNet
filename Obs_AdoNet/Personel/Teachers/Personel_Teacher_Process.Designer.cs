@@ -83,7 +83,7 @@
             this.btnSearchTeacherNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSearchTeacherNo.Location = new System.Drawing.Point(1038, 329);
             this.btnSearchTeacherNo.Name = "btnSearchTeacherNo";
-            this.btnSearchTeacherNo.Size = new System.Drawing.Size(200, 42);
+            this.btnSearchTeacherNo.Size = new System.Drawing.Size(208, 42);
             this.btnSearchTeacherNo.TabIndex = 22;
             this.btnSearchTeacherNo.Text = "Ara";
             this.btnSearchTeacherNo.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             // 
             this.lblPersonelSurname.AutoSize = true;
             this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelSurname.Location = new System.Drawing.Point(245, 29);
+            this.lblPersonelSurname.Location = new System.Drawing.Point(260, 29);
             this.lblPersonelSurname.Name = "lblPersonelSurname";
             this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
             this.lblPersonelSurname.TabIndex = 17;
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 588);
+            this.ClientSize = new System.Drawing.Size(1274, 573);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dtgTeachersList);
             this.Controls.Add(this.BtnTeacherUpdate);

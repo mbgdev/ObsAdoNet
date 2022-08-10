@@ -55,6 +55,8 @@
             this.lblPersonelSurname = new System.Windows.Forms.Label();
             this.lblPersonelName = new System.Windows.Forms.Label();
             this.lblPersonelNo = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTeacherList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,7 +148,7 @@
             // rtxtAdress
             // 
             this.rtxtAdress.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rtxtAdress.Location = new System.Drawing.Point(598, 358);
+            this.rtxtAdress.Location = new System.Drawing.Point(582, 367);
             this.rtxtAdress.Name = "rtxtAdress";
             this.rtxtAdress.Size = new System.Drawing.Size(358, 165);
             this.rtxtAdress.TabIndex = 75;
@@ -156,7 +158,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(593, 301);
+            this.label4.Location = new System.Drawing.Point(577, 326);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 27);
             this.label4.TabIndex = 74;
@@ -210,9 +212,9 @@
             this.lblEmail.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblEmail.Location = new System.Drawing.Point(31, 326);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(103, 27);
+            this.lblEmail.Size = new System.Drawing.Size(116, 27);
             this.lblEmail.TabIndex = 68;
-            this.lblEmail.Text = "E-Posta";
+            this.lblEmail.Text = "E-Posta:";
             // 
             // label1
             // 
@@ -287,7 +289,7 @@
             // 
             this.lblPersonelSurname.AutoSize = true;
             this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelSurname.Location = new System.Drawing.Point(364, 30);
+            this.lblPersonelSurname.Location = new System.Drawing.Point(387, 30);
             this.lblPersonelSurname.Name = "lblPersonelSurname";
             this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
             this.lblPersonelSurname.TabIndex = 60;
@@ -313,11 +315,31 @@
             this.lblPersonelNo.TabIndex = 58;
             this.lblPersonelNo.Text = "20223000";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Location = new System.Drawing.Point(582, 259);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(233, 34);
+            this.txtPassword.TabIndex = 84;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPassword.Location = new System.Drawing.Point(577, 214);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(90, 27);
+            this.lblPassword.TabIndex = 85;
+            this.lblPassword.Text = "Şifre:";
+            // 
             // Personel_Teacher_Process_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 899);
+            this.ClientSize = new System.Drawing.Size(1109, 875);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.BtnTeacherGet);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
@@ -381,5 +403,7 @@
         private System.Windows.Forms.Label lblPersonelSurname;
         private System.Windows.Forms.Label lblPersonelName;
         private System.Windows.Forms.Label lblPersonelNo;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
     }
 }

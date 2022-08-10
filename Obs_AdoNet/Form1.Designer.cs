@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(56, 107);
+            this.label1.Location = new System.Drawing.Point(52, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 27);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // txtNo
             // 
             this.txtNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNo.Location = new System.Drawing.Point(240, 107);
+            this.txtNo.Location = new System.Drawing.Point(236, 49);
             this.txtNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(189, 34);
@@ -58,7 +58,7 @@
             // btnLogIn
             // 
             this.btnLogIn.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLogIn.Location = new System.Drawing.Point(61, 227);
+            this.btnLogIn.Location = new System.Drawing.Point(57, 169);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(368, 64);
@@ -71,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(147, 170);
+            this.label2.Location = new System.Drawing.Point(143, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 27);
             this.label2.TabIndex = 3;
@@ -80,19 +80,18 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPassword.Location = new System.Drawing.Point(240, 167);
+            this.txtPassword.Location = new System.Drawing.Point(236, 109);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(189, 34);
             this.txtPassword.TabIndex = 2;
             // 
             // cbPassword
             // 
             this.cbPassword.AutoSize = true;
-            this.cbPassword.Location = new System.Drawing.Point(446, 181);
+            this.cbPassword.Location = new System.Drawing.Point(442, 123);
             this.cbPassword.Name = "cbPassword";
-            this.cbPassword.Size = new System.Drawing.Size(124, 25);
+            this.cbPassword.Size = new System.Drawing.Size(99, 20);
             this.cbPassword.TabIndex = 4;
             this.cbPassword.Text = "Şifre Göster";
             this.cbPassword.UseVisualStyleBackColor = true;
@@ -102,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 379);
+            this.ClientSize = new System.Drawing.Size(566, 271);
             this.Controls.Add(this.cbPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -111,7 +110,8 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Obs Giriş Ekranı";
+            this.Text = "Giriş Ekranı";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

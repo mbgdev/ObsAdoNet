@@ -27,8 +27,8 @@ namespace Obs_AdoNet.Personel
 
             lblHours.Text = DateTime.Now.ToLongTimeString();
             connection.Open();
-
-            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=20223001", connection);
+            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=@PersonnelNo", connection);
+            labelCommand.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
 
             labelCommand.ExecuteNonQuery();
 

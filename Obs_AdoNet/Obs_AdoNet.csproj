@@ -52,6 +52,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen.Designer.cs">
+      <DependentUpon>Lesson_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen_Add.Designer.cs">
+      <DependentUpon>Lesson_Screen_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen_Assigment_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen_Assigment_Student.Designer.cs">
+      <DependentUpon>Lesson_Screen_Assigment_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Lesson\Lesson_Screen_Update.Designer.cs">
+      <DependentUpon>Lesson_Screen_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personel\Personel\Personel_Personel_Process.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +158,18 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Lesson\Lesson_Screen.resx">
+      <DependentUpon>Lesson_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Lesson\Lesson_Screen_Add.resx">
+      <DependentUpon>Lesson_Screen_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Lesson\Lesson_Screen_Assigment_Student.resx">
+      <DependentUpon>Lesson_Screen_Assigment_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Lesson\Lesson_Screen_Update.resx">
+      <DependentUpon>Lesson_Screen_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\Personel\Personel_Personel_Process.resx">
       <DependentUpon>Personel_Personel_Process.cs</DependentUpon>

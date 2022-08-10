@@ -18,8 +18,32 @@ namespace Obs_AdoNet.Personel
             InitializeComponent();
         }
 
-
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
+        private string PersonelID;
+        private int PersonnelIdGet()
+        {
+
+
+            SqlCommand perId = new SqlCommand("select Id from Personnels where PersonnelNo=@PersonnelNo", connection);
+            perId.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
+            connection.Open();
+            SqlDataReader reader = perId.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                PersonelID = reader["Id"].ToString();
+
+            }
+
+            reader.Close();
+            connection.Close();
+
+
+            return Convert.ToInt32(PersonelID);
+
+
+        }
         private void LabelValues()
         {
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -27,7 +51,8 @@ namespace Obs_AdoNet.Personel
             lblHours.Text = DateTime.Now.ToLongTimeString();
             connection.Open();
 
-            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=20223001", connection);
+            SqlCommand labelCommand = new SqlCommand("select PersonnelNo,PersonnelName,PersonnelSurname from Personnels where PersonnelNo=@PersonnelNo", connection);
+            labelCommand.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
 
             labelCommand.ExecuteNonQuery();
 
@@ -51,7 +76,7 @@ namespace Obs_AdoNet.Personel
         {
             connection.Open();
 
-            SqlCommand command = new SqlCommand("select * from Students order by Id desc", connection);
+            SqlCommand command = new SqlCommand("select * from Students order by StudentId desc", connection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -63,8 +88,6 @@ namespace Obs_AdoNet.Personel
 
             connection.Close();
         }
-
-
 
         private void BtnStudentGet_Click(object sender, EventArgs e)
         {
@@ -96,9 +119,9 @@ namespace Obs_AdoNet.Personel
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            connection.Open();
 
             SqlCommand command = new SqlCommand("update Students set  " +
+                "StudentPassword=@StudentPassword,"+
                 "StudentName=@StudentName, " +
                 "StudentSurname=@StudentSurname," +
                 "StudentEmail=@StudentEmail," +
@@ -114,6 +137,7 @@ namespace Obs_AdoNet.Personel
                 "  where StudentNo=@StudentNo", connection);
 
             command.Parameters.AddWithValue("@StudentNo", txtStudentNo.Text);
+            command.Parameters.AddWithValue("@StudentPassword", txtPassword.Text);
             command.Parameters.AddWithValue("@StudentName", txtStudentName.Text);
             command.Parameters.AddWithValue("@StudentSurname", txtStudentSurname.Text);
             command.Parameters.AddWithValue("@StudentEmail", txtStudentEmail.Text);
@@ -122,9 +146,9 @@ namespace Obs_AdoNet.Personel
             command.Parameters.AddWithValue("@CreatedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@ModifiedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@StatusDate", DateTime.Now.ToShortDateString());
-            command.Parameters.AddWithValue("@CreatedUserId", 1);
-            command.Parameters.AddWithValue("@ModifiedUserId", 1);
-            command.Parameters.AddWithValue("@StatusUserId", 1);
+            command.Parameters.AddWithValue("@CreatedUserId", PersonnelIdGet());
+            command.Parameters.AddWithValue("@ModifiedUserId", PersonnelIdGet());
+            command.Parameters.AddWithValue("@StatusUserId", PersonnelIdGet());
 
 
             if (rbActive.Checked == true)
@@ -140,8 +164,9 @@ namespace Obs_AdoNet.Personel
                 command.Parameters.AddWithValue("@Status1", "False");
 
             }
+            connection.Open();
             command.ExecuteNonQuery();
-            MessageBox.Show("Ürün başarılı bir şekilde sisteme güncellendi.");
+            MessageBox.Show("Öğretmen başarılı bir şekilde sisteme güncellendi.");
             connection.Close();
             DtgStudentList();
         }

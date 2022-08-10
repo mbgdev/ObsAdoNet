@@ -17,11 +17,33 @@ namespace Obs_AdoNet.Personel.Personel
         {
             InitializeComponent();
         }
-
-
-
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
 
+        private string PersonelID;
+        private int PersonnelIdGet()
+        {
+
+
+            SqlCommand perId = new SqlCommand("select Id from Personnels where PersonnelNo=@PersonnelNo", connection);
+            perId.Parameters.AddWithValue("@PersonnelNo", Form1.PersonelNo);
+            connection.Open();
+            SqlDataReader reader = perId.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                PersonelID = reader["Id"].ToString();
+
+            }
+
+            reader.Close();
+            connection.Close();
+
+
+            return Convert.ToInt32(PersonelID);
+
+
+        }
         private void LabelValues()
         {
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -49,7 +71,6 @@ namespace Obs_AdoNet.Personel.Personel
 
         }
 
-
         private void DtgPersonnelList()
         {
             connection.Open();
@@ -72,9 +93,7 @@ namespace Obs_AdoNet.Personel.Personel
             LabelValues();
             DtgPersonnelList();
         }
-
        
-
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             Personel_Personel_Process personel_Personel_Process = new Personel_Personel_Process();
@@ -106,9 +125,10 @@ namespace Obs_AdoNet.Personel.Personel
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            connection.Open();
+          
 
             SqlCommand command = new SqlCommand("update Personnels set  " +
+                "PersonnelPassword=@PersonnelPassword,"+
                 "PersonnelName=@PersonnelName, " +
                 "PersonnelSurname=@PersonnelSurname," +
                 "PersonnelEmail=@PersonnelEmail," +
@@ -124,6 +144,7 @@ namespace Obs_AdoNet.Personel.Personel
                 "  where PersonnelNo=@PersonnelNo", connection);
 
             command.Parameters.AddWithValue("@PersonnelNo", txtPersonelNo.Text);
+            command.Parameters.AddWithValue("@PersonnelPassword", txtPassword.Text);
             command.Parameters.AddWithValue("@PersonnelName", txtPersonelName.Text);
             command.Parameters.AddWithValue("@PersonnelSurname", txtPersonelSurname.Text);
             command.Parameters.AddWithValue("@PersonnelEmail", txtPersonelEmail.Text);
@@ -132,9 +153,10 @@ namespace Obs_AdoNet.Personel.Personel
             command.Parameters.AddWithValue("@CreatedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@ModifiedDate", DateTime.Now.ToShortDateString());
             command.Parameters.AddWithValue("@StatusDate", DateTime.Now.ToShortDateString());
-            command.Parameters.AddWithValue("@CreatedUserId", 1);
-            command.Parameters.AddWithValue("@ModifiedUserId", 1);
-            command.Parameters.AddWithValue("@StatusUserId", 1);
+            command.Parameters.AddWithValue("@CreatedUserId", PersonnelIdGet());
+            command.Parameters.AddWithValue("@ModifiedUserId", PersonnelIdGet());
+            command.Parameters.AddWithValue("@StatusUserId", PersonnelIdGet());
+
 
 
             if (rbActive.Checked == true)
@@ -150,8 +172,9 @@ namespace Obs_AdoNet.Personel.Personel
                 command.Parameters.AddWithValue("@Status1", "False");
 
             }
+            connection.Open();
             command.ExecuteNonQuery();
-            MessageBox.Show("Ürün başarılı bir şekilde sisteme güncellendi.");
+            MessageBox.Show("Personel başarılı bir şekilde sisteme güncellendi.");
             connection.Close();
             DtgPersonnelList();
         }

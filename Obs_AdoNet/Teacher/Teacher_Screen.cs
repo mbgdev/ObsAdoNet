@@ -16,8 +16,10 @@ namespace Obs_AdoNet.Teacher
         public Teacher_Screen()
         {
             InitializeComponent();
+           
         }
 
+     
         private SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-T9KCH5P;Initial Catalog=ObsDB;Integrated Security=True;");
 
         private  void LabelValues ()
@@ -53,7 +55,7 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select distinct LessonName, LessonDate, LessonTime, TeacherName, TeacherSurname  from Teachers inner join TransitionLesson  on TransitionLesson.TeacherId = Teachers.Id  inner join  Lessons  on Lessons.Lesson_Id = TransitionLesson.LessonId where TeacherNo = @teacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select distinct LessonName, LessonDate, LessonTime, TeacherName, TeacherSurname  from Teachers inner join TransitionLesson  on TransitionLesson.TeacherId = Teachers.TeacherId  inner join  Lessons  on Lessons.Lesson_Id = TransitionLesson.LessonId where TeacherNo = @teacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 
@@ -72,7 +74,14 @@ namespace Obs_AdoNet.Teacher
         {
             connection.Open();
 
-            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo,StudentName,StudentSurname from Students inner join Exam_Results on Students.Id = Exam_Results.StudentId inner join Lessons on Lessons.Lesson_Id = Exam_Results.LessonId inner join Teachers on Teachers.Id = Exam_Results.TeacherId where TeacherNo = @teacherNo", connection);
+            SqlCommand dtgLessonCommand = new SqlCommand("select LessonName, StudentNo, StudentName, StudentSurname from Students " +
+                "inner join TransitionLesson " +
+                "on TransitionLesson.StudentId = Students.StudentId " +
+                "inner join Teachers " +
+                "on Teachers.TeacherId = TransitionLesson.TeacherId " +
+                "inner join Lessons " +
+                "on Lessons.Lesson_Id = TransitionLesson.LessonId " +
+                "where TeacherNo = @teacherNo", connection);
 
             SqlDataAdapter dtgLessonAdapter = new SqlDataAdapter(dtgLessonCommand);
 

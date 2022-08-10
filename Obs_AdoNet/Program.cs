@@ -1,4 +1,5 @@
-﻿using Obs_AdoNet.Personel.Personel;
+﻿using Obs_AdoNet.Personel.Lesson;
+using Obs_AdoNet.Personel.Personel;
 using Obs_AdoNet.Personel.Teachers;
 using Obs_AdoNet.Teacher;
 using System;
@@ -19,12 +20,7 @@ namespace Obs_AdoNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Personel_Personel_Process());
-            //Application.Run(new Personel.Personel_Screen());
-            //Application.Run(new Personel.Personel_Student_Process());
             Application.Run(new Form1());
-            //Application.Run(new Teacher_Screen());
-            // Application.Run(new Teacher_Exam_Input());
 
 
         }

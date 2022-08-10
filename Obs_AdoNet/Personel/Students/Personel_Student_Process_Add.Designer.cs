@@ -54,6 +54,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblPasswprd = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             // 
             this.lblPersonelSurname.AutoSize = true;
             this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelSurname.Location = new System.Drawing.Point(372, 42);
+            this.lblPersonelSurname.Location = new System.Drawing.Point(390, 42);
             this.lblPersonelSurname.Name = "lblPersonelSurname";
             this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
             this.lblPersonelSurname.TabIndex = 9;
@@ -120,7 +122,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSave.Location = new System.Drawing.Point(47, 354);
+            this.btnSave.Location = new System.Drawing.Point(43, 483);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(231, 66);
             this.btnSave.TabIndex = 14;
@@ -162,9 +164,9 @@
             this.lblEmail.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblEmail.Location = new System.Drawing.Point(41, 223);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(103, 27);
+            this.lblEmail.Size = new System.Drawing.Size(116, 27);
             this.lblEmail.TabIndex = 17;
-            this.lblEmail.Text = "E-Posta";
+            this.lblEmail.Text = "E-Posta:";
             // 
             // txtStudentName
             // 
@@ -212,7 +214,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(604, 214);
+            this.label4.Location = new System.Drawing.Point(604, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 27);
             this.label4.TabIndex = 23;
@@ -221,7 +223,7 @@
             // rtxtAdress
             // 
             this.rtxtAdress.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rtxtAdress.Location = new System.Drawing.Point(609, 271);
+            this.rtxtAdress.Location = new System.Drawing.Point(609, 280);
             this.rtxtAdress.Name = "rtxtAdress";
             this.rtxtAdress.Size = new System.Drawing.Size(358, 165);
             this.rtxtAdress.TabIndex = 24;
@@ -264,7 +266,7 @@
             // dtgStudentList
             // 
             this.dtgStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgStudentList.Location = new System.Drawing.Point(43, 500);
+            this.dtgStudentList.Location = new System.Drawing.Point(43, 629);
             this.dtgStudentList.Name = "dtgStudentList";
             this.dtgStudentList.RowHeadersWidth = 51;
             this.dtgStudentList.RowTemplate.Height = 24;
@@ -275,7 +277,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(44, 453);
+            this.label3.Location = new System.Drawing.Point(44, 582);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(207, 27);
             this.label3.TabIndex = 29;
@@ -301,11 +303,31 @@
             this.label5.TabIndex = 31;
             this.label5.Text = resources.GetString("label5.Text");
             // 
+            // lblPasswprd
+            // 
+            this.lblPasswprd.AutoSize = true;
+            this.lblPasswprd.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPasswprd.Location = new System.Drawing.Point(44, 340);
+            this.lblPasswprd.Name = "lblPasswprd";
+            this.lblPasswprd.Size = new System.Drawing.Size(90, 27);
+            this.lblPasswprd.TabIndex = 32;
+            this.lblPasswprd.Text = "Şifre:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPassword.Location = new System.Drawing.Point(49, 388);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(229, 34);
+            this.txtPassword.TabIndex = 33;
+            // 
             // Personel_Student_Process_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 768);
+            this.ClientSize = new System.Drawing.Size(1126, 900);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPasswprd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label3);
@@ -367,5 +389,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPasswprd;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

@@ -57,7 +57,6 @@
             // 
             // dtgStudentList
             // 
-            this.dtgStudentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgStudentList.Location = new System.Drawing.Point(56, 216);
             this.dtgStudentList.Name = "dtgStudentList";
@@ -90,7 +89,7 @@
             // 
             this.lblPersonelSurname.AutoSize = true;
             this.lblPersonelSurname.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonelSurname.Location = new System.Drawing.Point(273, 40);
+            this.lblPersonelSurname.Location = new System.Drawing.Point(288, 40);
             this.lblPersonelSurname.Name = "lblPersonelSurname";
             this.lblPersonelSurname.Size = new System.Drawing.Size(77, 27);
             this.lblPersonelSurname.TabIndex = 4;
@@ -139,7 +138,7 @@
             this.btnSearchStudentNo.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSearchStudentNo.Location = new System.Drawing.Point(1066, 340);
             this.btnSearchStudentNo.Name = "btnSearchStudentNo";
-            this.btnSearchStudentNo.Size = new System.Drawing.Size(200, 42);
+            this.btnSearchStudentNo.Size = new System.Drawing.Size(208, 42);
             this.btnSearchStudentNo.TabIndex = 9;
             this.btnSearchStudentNo.Text = "Ara";
             this.btnSearchStudentNo.UseVisualStyleBackColor = true;
@@ -181,7 +180,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.Location = new System.Drawing.Point(1160, 40);
+            this.btnBack.Location = new System.Drawing.Point(1139, 40);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(135, 53);
             this.btnBack.TabIndex = 31;
@@ -193,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 591);
+            this.ClientSize = new System.Drawing.Size(1303, 574);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.BtnStudentUpdate);
             this.Controls.Add(this.btnStudentAdd);
@@ -209,7 +208,7 @@
             this.Controls.Add(this.dtgStudentList);
             this.Controls.Add(this.lblList);
             this.Name = "Personel_Process";
-            this.Text = "Öğrenci işleri Ekranı";
+            this.Text = "Öğrenci İşleri Ekranı";
             this.Load += new System.EventHandler(this.Personel_Student_Process_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStudentList)).EndInit();
             this.ResumeLayout(false);

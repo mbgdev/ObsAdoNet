@@ -104,7 +104,6 @@
             this.dtgTeacherLessonProgram.RowTemplate.Height = 24;
             this.dtgTeacherLessonProgram.Size = new System.Drawing.Size(582, 160);
             this.dtgTeacherLessonProgram.TabIndex = 5;
-           
             // 
             // lblLessonProgram
             // 
@@ -160,9 +159,9 @@
             // btnExamInput
             // 
             this.btnExamInput.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExamInput.Location = new System.Drawing.Point(1165, 119);
+            this.btnExamInput.Location = new System.Drawing.Point(1165, 111);
             this.btnExamInput.Name = "btnExamInput";
-            this.btnExamInput.Size = new System.Drawing.Size(145, 43);
+            this.btnExamInput.Size = new System.Drawing.Size(145, 50);
             this.btnExamInput.TabIndex = 11;
             this.btnExamInput.Text = "Not Giriş";
             this.btnExamInput.UseVisualStyleBackColor = true;
@@ -172,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 455);
+            this.ClientSize = new System.Drawing.Size(1356, 414);
             this.Controls.Add(this.btnExamInput);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
